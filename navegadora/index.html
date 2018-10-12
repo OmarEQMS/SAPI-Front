@@ -305,7 +305,7 @@
                                                     <button onclick="location.href=' ./form.html'" class="btn btn-info btn-block" id="btn-formulario">
                                                         <i class="fab fa-wpforms"></i>
                                                     </button>
-                                                    <button class="btn btn-primary btn-block mt-1" id="btn-editarTabla2" data-toggle="modal" data-target="#modalEditarTabla2Usuario">
+                                                    <button class="btn btn-primary btn-block mt-1" id="btn-editarTabla2" data-toggle="modal" data-target="#modalEditarUsuarioTabla2">
                                                         <i class="fas fa-edit"></i>
                                                     </button>
                                                     <button class="btn btn-danger btn-block mt-1" id="btn-cancelar" data-toggle="modal" data-target="#modalCancelarCitas">
@@ -327,7 +327,7 @@
                                                     <button class="btn btn-info btn-block" id="btn-formulario">
                                                         <i class="fab fa-wpforms"></i>
                                                     </button>
-                                                    <button class="btn btn-primary btn-block" id="btn-editarTabla2" data-toggle="modal" data-target="#modalEditarTabla2Usuario">
+                                                    <button class="btn btn-primary btn-block" id="btn-editarTabla2" data-toggle="modal" data-target="#modalEditarUsuarioTabla2">
                                                         <i class="fas fa-edit"></i>
                                                     </button>
                                                    
@@ -350,7 +350,7 @@
                                                     <button class="btn btn-info btn-block" id="btn-formulario">
                                                         <i class="fab fa-wpforms"></i>
                                                     </button>
-                                                    <button class="btn btn-primary btn-block" id="btn-editarTabla2" data-toggle="modal" data-target="#modalEditarTabla2Usuario">
+                                                    <button class="btn btn-primary btn-block" id="btn-editarTabla2" data-toggle="modal" data-target="#modalEditarUsuarioTabla2">
                                                         <i class="fas fa-edit"></i>
                                                     </button>
                                                    
@@ -373,7 +373,7 @@
                                                         <button class="btn btn-info btn-block" id="btn-formulario">
                                                             <i class="fab fa-wpforms"></i>
                                                         </button>
-                                                        <button class="btn btn-primary btn-block" id="btn-editarTabla2" data-toggle="modal" data-target="#modalEditarTabla2Usuario">
+                                                        <button class="btn btn-primary btn-block" id="btn-editarTabla2" data-toggle="modal" data-target="#modalEditarUsuarioTabla2">
                                                             <i class="fas fa-edit"></i>
                                                         </button>
                                                        
@@ -612,10 +612,16 @@
 
                         <div class="form-group row justify-content-center">
                             <div class="col-12 text-center">
+                                <button type="button" class="btn btn-morado-solid mt-2" data-dismiss="modal">Imprimir los términos y condiciones</button>
+                            </div>
+                        </div>
+
+                        <div class="form-group row justify-content-center">
+                            <div class="col-12 text-center">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
                                     <label class="form-check-label" for="autoSizingCheck2">
-                                        Acepto los términos y condiciones
+                                        El paciente está informado y aceptó los términos y condiciones
                                     </label>
                                 </div>
                             </div>
@@ -632,7 +638,7 @@
             </div>
         </div>
         <div class="modal fade" id="modalEditarUsuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLongTitle">Editar paciente</h5>
@@ -642,22 +648,179 @@
                     </div>
                     <div class="modal-body">
                         <div class="form-group row">
-                            <div class="col-12">
-                                <input type="text" id="editar-nombrePaciente" class="form-control" value="María Esther" placeholder="Nombre(s)">
-                            </div>
-                            <div class="col-12 mt-3">
-                                <input type="text" id="editar-apellidoPPaciente" class="form-control" value="Domínguez" placeholder="Primer Apellido">
-                            </div>
-                            <div class="col-12 mt-3">
-                                <input type="text" id="editar-apellidoMPaciente" class="form-control" value="Mayoral" placeholder="Segundo Apellido">
-                            </div>
-                            <div class="col-12 mt-3">
-                                <input type="text" id="editar-przPaciente" class="form-control" value="A01422623" placeholder="CURP">
-                            </div>
-                            <div class="col-12 mt-3">
-                                <input type="text" id="editar-telefonoPaciente" class="form-control" value="735189738" placeholder="Teléfono">
+                            <div class="col-6">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control" id="editarNombreNavegadoraAPaciente" placeholder="Nombre">
+                                </div>
                             </div>
 
+                            <div class="col-6">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fas fa-id-card"></i>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control" id="editarCurpNavegadoraAPaciente" placeholder="CURP">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control" id="editarPrimer-apellidoNavegadoraAPaciente" placeholder="Primer Apellido">
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control" id="editarSegundo-apellidoNavegadoraAPaciente" placeholder="Segundo Apellido">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-12">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fas fa-calendar-alt"></i>
+                                        </div>
+                                    </div>
+                                    <input placeholder="Fecha de nacimiento" class="selectStyle form-control textbox-n" type="text" onfocus="(this.type='date')"  id="editarCumpleNavegadoraAPaciente">                                        
+                                </div>
+                            </div>
+                        </div>                        
+
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fas fa-user-circle"></i>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control" id="editarUsuarioNavegadoraAPaciente" placeholder="Usuario">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="input-group">
+                                    <select class="form-control" name="" id="">
+                                        <option disabled selected>Estado Civil</option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control" id="editarCalleNavegadoraAPaciente" placeholder="Calle">
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control" id="editarNumIntNavegadoraAPaciente" placeholder="No. int">
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control" id="editarNumExtNavegadoraAPaciente" placeholder="No. ext">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <div class="input-group">
+                                    <select class="form-control" name="" id="">
+                                        <option disabled selected>Estado</option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="input-group">
+                                    <select class="form-control" name="" id="">
+                                        <option disabled selected>Ciudad</option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fas fa-phone"></i>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control" id="editarTelNavegadoraAPaciente" placeholder="Teléfono">
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fas fa-at"></i>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control" id="editarCorreoNavegadoraAPaciente" placeholder="Correo">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-12">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control" id="editarColNavegadoraAPaciente" placeholder="Colonia">
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -668,53 +831,210 @@
             </div>
         </div>
 
-        <div class="modal fade" id="modalEditarTabla2Usuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Editar paciente</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-group row">
-                                <div class="col-12">
-                                    <input type="text" id="editar-nombrePaciente" class="form-control" value="María" placeholder="Nombre(s)">
-                                </div>
-                                <div class="col-12 mt-3">
-                                    <input type="text" id="editar-apellidoPPaciente" class="form-control" value="Torres" placeholder="Primer Apellido">
-                                </div>
-                                <div class="col-12 mt-3">
-                                    <input type="text" id="editar-apellidoMPaciente" class="form-control" value="Méndez" placeholder="Segundo Apellido">
-                                </div>
-                                <div class="col-12 mt-3">
-                                    <input type="text" id="editar-przPaciente" class="form-control" value="" placeholder="PRZ">
-                                </div>
-                                <div class="col-12 mt-3">
-                                    <input type="text" id="editar-telefonoPaciente" class="form-control" value="7774390078" placeholder="Teléfono">
-                                </div>
-                                <div class="col-12 mt-3 text-center">
-                                        <div class="form-check form-check-inline">
-                                                <input class="form-check-input mr-3" type="checkbox" id="cambioStatus"
-                                                    value="option1">
-                                                <label class="form-check-label" for="cambioStatus">Cambio a paciente</label>
-                                            </div>
+        <div class="modal fade" id="modalEditarUsuarioTabla2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Editar paciente</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fas fa-user"></i>
+                                        </div>
                                     </div>
-    
+                                    <input type="text" class="form-control" id="editarNombreNavegadoraAPaciente" placeholder="Nombre">
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fas fa-id-card"></i>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control" id="editarCurpNavegadoraAPaciente" placeholder="CURP">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control" id="editarPrimer-apellidoNavegadoraAPaciente" placeholder="Primer Apellido">
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control" id="editarSegundo-apellidoNavegadoraAPaciente" placeholder="Segundo Apellido">
+                                </div>
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-dismiss="modal" style="border-radius:20px">Cerrar</button>
-                            <button type="button" class="btn btn-primary" style="border-radius:20px">Guardar Cambios</button>
+
+                        <div class="form-group row">
+                            <div class="col-12">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fas fa-calendar-alt"></i>
+                                        </div>
+                                    </div>
+                                    <input placeholder="Fecha de nacimiento" class="selectStyle form-control textbox-n" type="text" onfocus="(this.type='date')"  id="editarCumpleNavegadoraAPaciente">                                        
+                                </div>
+                            </div>
+                        </div>                        
+
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fas fa-user-circle"></i>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control" id="editarUsuarioNavegadoraAPaciente" placeholder="Usuario">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="input-group">
+                                    <select class="form-control" name="" id="">
+                                        <option disabled selected>Estado Civil</option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
+
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control" id="editarCalleNavegadoraAPaciente" placeholder="Calle">
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control" id="editarNumIntNavegadoraAPaciente" placeholder="No. int">
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control" id="editarNumExtNavegadoraAPaciente" placeholder="No. ext">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <div class="input-group">
+                                    <select class="form-control" name="" id="">
+                                        <option disabled selected>Estado</option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="input-group">
+                                    <select class="form-control" name="" id="">
+                                        <option disabled selected>Ciudad</option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fas fa-phone"></i>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control" id="editarTelNavegadoraAPaciente" placeholder="Teléfono">
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fas fa-at"></i>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control" id="editarCorreoNavegadoraAPaciente" placeholder="Correo">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-12">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control" id="editarColNavegadoraAPaciente" placeholder="Colonia">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row text-center">
+
+                            <div class="col-12">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                    <label class="form-check-label" for="inlineCheckbox1">Cambio a paciente</label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal" style="border-radius:20px">Cerrar</button>
+                        <button type="button" class="btn btn-primary" style="border-radius:20px">Guardar Cambios</button>
                     </div>
                 </div>
             </div>
-
-
-
-
+        </div>
 
         <div class="modal fade" id="modalAceptarUsuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
