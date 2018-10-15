@@ -9,7 +9,7 @@ $(document).ready(function () {
             icon: "warning",
             buttons: true,
             buttons: ['Cancelar', 'Aceptar'],
-            dangerMode: true,
+                    
         })
             .then((eliminar) => {
                 if (eliminar) {
@@ -31,7 +31,7 @@ $(document).ready(function () {
             text: "Tendrás que reiniciar tu solicitud a preconsulta",
             icon: "warning",
             buttons: true,
-            buttons: ['Cancelar', 'Aceptar'],
+            buttons: ['Regresar', 'Cancelar cita'],
             dangerMode: true,
         })
             .then((cancelar) => {
@@ -55,7 +55,7 @@ $(document).ready(function () {
             text: "Tendrás que reiniciar tu solicitud a preconsulta",
             icon: "warning",
             buttons: true,
-            buttons: ['Cancelar', 'Aceptar'],
+            buttons: ['Regresar', 'Cancelar cita'],
             dangerMode: true,
         })
             .then((cancelar) => {

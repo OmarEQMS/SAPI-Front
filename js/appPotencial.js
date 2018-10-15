@@ -42,7 +42,11 @@ $(document).ready(function () {
         },
         events: [
             {
-                title: 'Pre consulta',
+                title: 'Preconsulta',
+                start: '2018-09-30'
+            },
+            {
+                title: 'Navegación',
                 start: '2018-09-30'
             }
         ]

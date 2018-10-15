@@ -4,7 +4,24 @@
 /* ---------------------------------------------------
     GENERALES
 ----------------------------------------------------- */
+.swal-button--confirm {
+    padding: 7px 19px;
+    border-radius: 25px;
+    color: #fff;
+    background-color: #007bff;
+    font-size: 15px;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+  }
 
+  .swal-button--cancel {
+    padding: 7px 19px;
+    border-radius: 25px;
+    color: #fff;
+    background-color: #dc3545;
+    font-size: 15px;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+  }
+  
 .colorMorado{
     color: #1e1441;
 }
