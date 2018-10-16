@@ -13,7 +13,7 @@ $(document).ready(function () {
     //TABLA MEDICOS
     $('#tablaMedicos').DataTable({
         responsive: true,
-        dom: 'Bfrtip',
+        dom: 'lBfrtip',
         buttons: [
 
             {
@@ -64,7 +64,7 @@ $(document).ready(function () {
     //TABLA NAVEGADORAS
     $('#tablaNavegadoras').DataTable({
         responsive: true,
-        dom: 'Bfrtip',
+        dom: 'lBfrtip',
         buttons: [
 
             {

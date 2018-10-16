@@ -22,6 +22,24 @@ body {
   background-size: cover;
 }
 
+.swal-button--segundaOpinion {
+    padding: 7px 19px;
+    border-radius: 20px;
+    color: #fff;
+    background-color: #007bff;
+    font-size: 15px;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+  }
+
+  .swal-button--primeraVez {
+    padding: 7px 19px;
+    border-radius: 20px;
+    color: #fff;
+    background-color: #dc3545;
+    font-size: 15px;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+  }
+
 .swal-button--confirm {
     padding: 7px 19px;
     border-radius: 25px;

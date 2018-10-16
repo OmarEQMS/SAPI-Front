@@ -51,7 +51,7 @@ $(document).ready(function () {
     $('#btn-cancelar').on('click', () => {
 
         swal({
-            title: "¿Estás segura(o)?",
+            title: "¿Estás segura(o) de cancelar la cita?",
             text: "El paciente tendrá que solicitar de nuevo cita a preconsulta.",
             icon: "warning",
             buttons: true,
@@ -109,7 +109,7 @@ $(document).ready(function () {
 
                     //ajax para aprobar
 
-                    location.href = "./documentos3.html"
+                    //location.href = "./documentos3.html"
 
                 } else {
 

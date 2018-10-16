@@ -36,8 +36,8 @@ $(document).ready(function () {
         swal(
             "¿Te han tratado por cáncer de mama previamente?", {
                 buttons: {
-                    segundaOpinion: "Sí",
                     primeraVez: "No",
+                    segundaOpinion: "Sí",
                 }
             })
             .then((value) => {
