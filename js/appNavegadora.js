@@ -10,6 +10,17 @@ $(document).ready(function () {
     $('#fechaLlamada').hide();
     $('#motivoLlamada').hide();
 
+    // Inicializar plug in tooltipster
+    $('.questionMark').tooltipster({
+        theme: 'tooltipster-shadow',
+        delay: '140'
+    });
+
+    $('[data-toggle="tooltip"]').tooltipster({
+        theme: 'tooltipster-shadow',
+        delay: '140'
+    });
+
     //Lamiillas
     oculta($('#contenedor-laminillas'));
     oculta($('#contenedor-bloques'));

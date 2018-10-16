@@ -12,7 +12,8 @@
     <link href="../lib/fontawesome/css/all.css" rel="stylesheet" />
     <link href='../lib/fullcalendar/fullcalendar.css' rel='stylesheet' />
     <link href="../lib/tooltipster/dist/css/tooltipster.bundle.min.css" rel="stylesheet" />
-    <link href="../lib/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-shadow.min.css" rel="stylesheet" />
+    <link href="../lib/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-shadow.min.css" rel="stylesheet"
+    />
     <link href="../lib/datatables/datatables.min.css" rel="stylesheet" type="text/css" />
     <script src="../lib/jquery/jquery-3.3.1.js" type="application/javascript"></script>
     <script src="../lib/jquery/jqueryPostGo.js" type="application/javascript"></script>
@@ -182,15 +183,13 @@
 
                             <nav>
                                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                    <a class="nav-item nav-link active text-center titulo-nav text-danger" id="nav-documentacion-tab"
-                                        data-toggle="tab" href="#documentacion" role="tab" aria-controls="nav-documentacion"
-                                        aria-selected="true" style="width:50%">
+                                    <a class="nav-item nav-link active text-center titulo-nav text-danger" id="nav-documentacion-tab" data-toggle="tab" href="#documentacion"
+                                        role="tab" aria-controls="nav-documentacion" aria-selected="true" style="width:50%">
                                         <i class="fas fa-file-alt mr-2 text-danger"></i>DOCUMENTACIÓN</a>
 
 
-                                    <a class="nav-item nav-link text-center titulo-nav text-primary" id="nav-formulario-tab"
-                                        data-toggle="tab" href="#nav-formulario" role="tab" aria-controls="nav-formulario"
-                                        aria-selected="false" style="width:50%">
+                                    <a class="nav-item nav-link text-center titulo-nav text-primary" id="nav-formulario-tab" data-toggle="tab" href="#nav-formulario"
+                                        role="tab" aria-controls="nav-formulario" aria-selected="false" style="width:50%">
                                         <i class="fas fa-file-signature text-primary mr-2"></i>FORMULARIOS</a>
                                 </div>
                             </nav>
@@ -198,20 +197,17 @@
                             <div class="tab-content dark" id="nav-tabContent">
 
                                 <!-- 1er contenido: Solicitud -->
-                                <div class="tab-pane fade show active white mt-5" id="documentacion" role="tabpanel"
-                                    aria-labelledby="nav-documentacion-tab">
+                                <div class="tab-pane fade show active white mt-5" id="documentacion" role="tabpanel" aria-labelledby="nav-documentacion-tab">
 
                                     <div class="row">
                                         <div class="col-12">
-                                            <button class="btn btn-morado float-right mb-3" style="border-radius: 20px"
-                                                data-toggle="modal" data-target="#modalAgregarPaciente">
+                                            <button class="btn btn-morado float-right mb-3" style="border-radius: 20px" data-toggle="modal" data-target="#modalAgregarPaciente">
                                                 <i class="fas fa-user-plus"></i> Agregar Paciente</button>
                                         </div>
                                     </div>
 
                                     <!--Table-->
-                                    <table class="display responsive no-wrap table table-striped mt-3" id="tabla1"
-                                        width="100%">
+                                    <table class="display responsive no-wrap table table-striped mt-3" id="tabla1" width="100%">
                                         <thead>
                                             <tr>
                                                 <th scope="col">Nombre</th>
@@ -236,20 +232,16 @@
                                                 <td>7774390070</td>
                                                 <td>
 
-                                                    <button onclick="location.href=' ./documentos.html'" class="btn btn-info"
-                                                        id="btn-ver">
+                                                    <button onclick="location.href=' ./documentos.html'" class="btn btn-info" id="btn-ver">
                                                         <i class="far fa-eye"></i>
                                                     </button>
-                                                    <button class="btn btn-success" id="btn-aceptar" data-toggle="modal"
-                                                        data-target="#modalAceptarUsuario">
+                                                    <button class="btn btn-success" id="btn-aceptar" data-toggle="modal" data-target="#modalAceptarUsuario">
                                                         <i class="fas fa-check"></i>
                                                     </button>
-                                                    <button class="btn btn-primary" id="btn-editar" data-toggle="modal"
-                                                        data-target="#modalEditarUsuario">
+                                                    <button class="btn btn-primary" id="btn-editar" data-toggle="modal" data-target="#modalEditarUsuario">
                                                         <i class="fas fa-edit"></i>
                                                     </button>
-                                                    <button class="btn btn-danger mt-1" id="btn-eliminar" data-toggle="modal"
-                                                        data-target="#modalEliminarUsuario">
+                                                    <button class="btn btn-danger mt-1" id="btn-eliminar" data-toggle="modal" data-target="#modalEliminarUsuario">
                                                         <i class="fas fa-trash-alt"></i>
                                                     </button>
                                                 </td>
@@ -266,16 +258,13 @@
                                                     <button class="btn btn-info" id="btn-ver">
                                                         <i class="far fa-eye"></i>
                                                     </button>
-                                                    <button class="btn btn-success" id="btn-aceptar" data-toggle="modal"
-                                                        data-target="#modalAceptarUsuario">
+                                                    <button class="btn btn-success" id="btn-aceptar" data-toggle="modal" data-target="#modalAceptarUsuario">
                                                         <i class="fas fa-check"></i>
                                                     </button>
-                                                    <button class="btn btn-primary" id="btn-editar" data-toggle="modal"
-                                                        data-target="#modalEditarUsuario">
+                                                    <button class="btn btn-primary" id="btn-editar" data-toggle="modal" data-target="#modalEditarUsuario">
                                                         <i class="fas fa-edit"></i>
                                                     </button>
-                                                    <button class="btn btn-danger mt-1" id="btn-eliminar" data-toggle="modal"
-                                                        data-target="#modalEliminarUsuario">
+                                                    <button class="btn btn-danger mt-1" id="btn-eliminar" data-toggle="modal" data-target="#modalEliminarUsuario">
                                                         <i class="fas fa-trash-alt"></i>
                                                     </button>
                                                 </td>
@@ -286,8 +275,7 @@
                                 </div>
 
                                 <!-- 2do contenido: APROBACION -->
-                                <div class="tab-pane active fade white mt-4" id="nav-formulario" role="tabpanel"
-                                    aria-labelledby="nav-formulario-tab">
+                                <div class="tab-pane active fade white mt-4" id="nav-formulario" role="tabpanel" aria-labelledby="nav-formulario-tab">
 
 
 
@@ -296,42 +284,45 @@
 
                                     <div class="row justify-content-end mt-5">
 
-                                        <div class="col-12">
-                                            <a data-toggle="tooltip" data-tooltip-content="#tooltip_content13"><i class="fas fa-info-circle float-right"
-                                                    style="font-size:25px"></i></a>
+                                        <div class="col-1 iconoQuestion align-self-center mb-4">
+                                            <a href="#" class="questionMark float-right" data-tooltip-content="#tooltip_contentnew"><i
+                                                    class="fas fa-question-circle icono-info" style="font-size:25px"></i></a>
                                         </div>
 
+
                                         <div class="tooltip_templates">
-                                            <span id="tooltip_content13">
+                                            <span id="tooltip_contentnew">
                                                 <span>Recuerda:</span>
                                                 <ul>
-                                                        <li> <span class="badge badge-danger"><span class="ocultaBadge">CC</span></span>
-                                                            <span class="">Rojo: Formulario sin empezar.
-                                                            </span>
-                                                            </li>
-                                                            <li> <span class="badge badge-warning"><span class="ocultaBadge">CC</span></span>
-                                                            <span class="">Amarillo: Formulario empezado.
-                                                            </span>
-                                                            </li>
-                                                            <li> <span class="badge badge-info"><span class="ocultaBadge">CC</span></span>
-                                                            <span class="">Azul: Formulario completo hasta la penúltima página.
-                                                            </span>
-                                                            </li>
-                                                         <li> <span class="badge badge-success"><span class="ocultaBadge">CC</span></span>
-                                                            <span class="">Verde: Formulario completo.
-                                                            </span>
-                                                            </li>
+                                                    <li> <span class="badge badge-danger"><span class="ocultaBadge">CC</span></span>
+                                                        <span class="">Rojo: Formulario sin empezar.
+                                                        </span>
+                                                    </li>
+                                                    <li> <span class="badge badge-warning"><span class="ocultaBadge">CC</span></span>
+                                                        <span class="">Amarillo: Formulario empezado.
+                                                        </span>
+                                                    </li>
+                                                    <li> <span class="badge badge-info"><span class="ocultaBadge">CC</span></span>
+                                                        <span class="">Azul: Formulario completo hasta la penúltima página.
+                                                        </span>
+                                                    </li>
+                                                    <li> <span class="badge badge-success"><span class="ocultaBadge">CC</span></span>
+                                                        <span class="">Verde: Formulario completo.
+                                                        </span>
+                                                    </li>
                                                 </ul>
                                             </span>
+                                            </span>
+
                                         </div>
+                                        
 
                                     </div>
 
 
 
                                     <!-- segunda tabla -->
-                                    <table class="display responsive no-wrap table table-striped mt-3" id="tabla2"
-                                        width="100%">
+                                    <table class="display responsive no-wrap table table-striped mt-3" id="tabla2" width="100%">
                                         <thead>
                                             <tr>
                                                 <th scope="col">PRZ</th>
@@ -356,16 +347,13 @@
                                                 <td>17 agosto 2018</td>
                                                 <td>7774390078</td>
                                                 <td>
-                                                    <button onclick="location.href=' ./form.html'" class="btn btn-info btn-block"
-                                                        id="btn-formulario">
+                                                    <button onclick="location.href=' ./form.html'" class="btn btn-info btn-block" id="btn-formulario">
                                                         <i class="fab fa-wpforms"></i>
                                                     </button>
-                                                    <button class="btn btn-primary btn-block mt-1" id="btn-editarTabla2"
-                                                        data-toggle="modal" data-target="#modalEditarUsuarioTabla2">
+                                                    <button class="btn btn-primary btn-block mt-1" id="btn-editarTabla2" data-toggle="modal" data-target="#modalEditarUsuarioTabla2">
                                                         <i class="fas fa-edit"></i>
                                                     </button>
-                                                    <button class="btn btn-danger btn-block mt-1" id="btn-cancelar"
-                                                        data-toggle="modal" data-target="#modalCancelarCitas">
+                                                    <button class="btn btn-danger btn-block mt-1" id="btn-cancelar" data-toggle="modal" data-target="#modalCancelarCitas">
                                                         <i class="fas fa-ban"></i>
                                                     </button>
                                                 </td>
@@ -384,13 +372,11 @@
                                                     <button class="btn btn-info btn-block" id="btn-formulario">
                                                         <i class="fab fa-wpforms"></i>
                                                     </button>
-                                                    <button class="btn btn-primary btn-block" id="btn-editarTabla2"
-                                                        data-toggle="modal" data-target="#modalEditarUsuarioTabla2">
+                                                    <button class="btn btn-primary btn-block" id="btn-editarTabla2" data-toggle="modal" data-target="#modalEditarUsuarioTabla2">
                                                         <i class="fas fa-edit"></i>
                                                     </button>
 
-                                                    <button class="btn btn-danger btn-block" id="btn-cancelar"
-                                                        data-toggle="modal" data-target="#modalCancelarCitas">
+                                                    <button class="btn btn-danger btn-block" id="btn-cancelar" data-toggle="modal" data-target="#modalCancelarCitas">
                                                         <i class="fas fa-ban"></i>
                                                     </button>
                                                 </td>
@@ -409,13 +395,11 @@
                                                     <button class="btn btn-info btn-block" id="btn-formulario">
                                                         <i class="fab fa-wpforms"></i>
                                                     </button>
-                                                    <button class="btn btn-primary btn-block" id="btn-editarTabla2"
-                                                        data-toggle="modal" data-target="#modalEditarUsuarioTabla2">
+                                                    <button class="btn btn-primary btn-block" id="btn-editarTabla2" data-toggle="modal" data-target="#modalEditarUsuarioTabla2">
                                                         <i class="fas fa-edit"></i>
                                                     </button>
 
-                                                    <button class="btn btn-danger btn-block" id="btn-cancelar"
-                                                        data-toggle="modal" data-target="#modalCancelarCitas">
+                                                    <button class="btn btn-danger btn-block" id="btn-cancelar" data-toggle="modal" data-target="#modalCancelarCitas">
                                                         <i class="fas fa-ban"></i>
                                                     </button>
                                                 </td>
@@ -434,13 +418,11 @@
                                                     <button class="btn btn-info btn-block" id="btn-formulario">
                                                         <i class="fab fa-wpforms"></i>
                                                     </button>
-                                                    <button class="btn btn-primary btn-block" id="btn-editarTabla2"
-                                                        data-toggle="modal" data-target="#modalEditarUsuarioTabla2">
+                                                    <button class="btn btn-primary btn-block" id="btn-editarTabla2" data-toggle="modal" data-target="#modalEditarUsuarioTabla2">
                                                         <i class="fas fa-edit"></i>
                                                     </button>
 
-                                                    <button class="btn btn-danger btn-block" id="btn-cancelar"
-                                                        data-toggle="modal" data-target="#modalCancelarCitas">
+                                                    <button class="btn btn-danger btn-block" id="btn-cancelar" data-toggle="modal" data-target="#modalCancelarCitas">
                                                         <i class="fas fa-ban"></i>
                                                     </button>
                                                 </td>
@@ -460,8 +442,7 @@
 
         </div>
 
-        <div class="modal fade" id="modalAgregarPaciente" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
-            aria-hidden="true">
+        <div class="modal fade" id="modalAgregarPaciente" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -507,8 +488,8 @@
                                             <i class="fas fa-calendar-alt"></i>
                                         </div>
                                     </div>
-                                    <input placeholder="Fecha de nacimiento" class="selectStyle form-control textbox-n"
-                                        type="text" onfocus="(this.type='date')" id="cumpleNavegadora">
+                                    <input placeholder="Fecha de nacimiento" class="selectStyle form-control textbox-n" type="text" onfocus="(this.type='date')"
+                                        id="cumpleNavegadora">
                                 </div>
                             </div>
                         </div>
@@ -677,8 +658,8 @@
 
                         <div class="form-group row justify-content-center">
                             <div class="col-12 text-center">
-                                <button type="button" class="btn btn-morado-solid mt-2" data-dismiss="modal">Imprimir
-                                    los términos y condiciones</button>
+                                <button type="button" class="btn btn-morado-solid mt-2" data-dismiss="modal">Imprimir los
+                                    términos y condiciones</button>
                             </div>
                         </div>
 
@@ -704,8 +685,7 @@
                 </div>
             </div>
         </div>
-        <div class="modal fade" id="modalEditarUsuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
-            aria-hidden="true">
+        <div class="modal fade" id="modalEditarUsuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -723,8 +703,7 @@
                                             <i class="fas fa-user"></i>
                                         </div>
                                     </div>
-                                    <input type="text" class="form-control" id="editarNombreNavegadoraAPaciente"
-                                        placeholder="Nombre">
+                                    <input type="text" class="form-control" id="editarNombreNavegadoraAPaciente" placeholder="Nombre">
                                 </div>
                             </div>
 
@@ -735,8 +714,7 @@
                                             <i class="fas fa-id-card"></i>
                                         </div>
                                     </div>
-                                    <input type="text" class="form-control" id="editarCurpNavegadoraAPaciente"
-                                        placeholder="CURP">
+                                    <input type="text" class="form-control" id="editarCurpNavegadoraAPaciente" placeholder="CURP">
                                 </div>
                             </div>
 
@@ -750,8 +728,7 @@
                                             <i class="fas fa-user"></i>
                                         </div>
                                     </div>
-                                    <input type="text" class="form-control" id="editarPrimer-apellidoNavegadoraAPaciente"
-                                        placeholder="Primer Apellido">
+                                    <input type="text" class="form-control" id="editarPrimer-apellidoNavegadoraAPaciente" placeholder="Primer Apellido">
                                 </div>
                             </div>
 
@@ -762,8 +739,7 @@
                                             <i class="fas fa-user"></i>
                                         </div>
                                     </div>
-                                    <input type="text" class="form-control" id="editarSegundo-apellidoNavegadoraAPaciente"
-                                        placeholder="Segundo Apellido">
+                                    <input type="text" class="form-control" id="editarSegundo-apellidoNavegadoraAPaciente" placeholder="Segundo Apellido">
                                 </div>
                             </div>
                         </div>
@@ -776,8 +752,8 @@
                                             <i class="fas fa-calendar-alt"></i>
                                         </div>
                                     </div>
-                                    <input placeholder="Fecha de nacimiento" class="selectStyle form-control textbox-n"
-                                        type="text" onfocus="(this.type='date')" id="editarCumpleNavegadoraAPaciente">
+                                    <input placeholder="Fecha de nacimiento" class="selectStyle form-control textbox-n" type="text" onfocus="(this.type='date')"
+                                        id="editarCumpleNavegadoraAPaciente">
                                 </div>
                             </div>
                         </div>
@@ -790,8 +766,7 @@
                                             <i class="fas fa-user-circle"></i>
                                         </div>
                                     </div>
-                                    <input type="text" class="form-control" id="editarUsuarioNavegadoraAPaciente"
-                                        placeholder="Usuario">
+                                    <input type="text" class="form-control" id="editarUsuarioNavegadoraAPaciente" placeholder="Usuario">
                                 </div>
                             </div>
                             <div class="col-6">
@@ -813,8 +788,7 @@
                                             <i class="fas fa-map-marker-alt"></i>
                                         </div>
                                     </div>
-                                    <input type="text" class="form-control" id="editarCalleNavegadoraAPaciente"
-                                        placeholder="Calle">
+                                    <input type="text" class="form-control" id="editarCalleNavegadoraAPaciente" placeholder="Calle">
                                 </div>
                             </div>
                             <div class="col-3">
@@ -824,8 +798,7 @@
                                             <i class="fas fa-map-marker-alt"></i>
                                         </div>
                                     </div>
-                                    <input type="text" class="form-control" id="editarNumIntNavegadoraAPaciente"
-                                        placeholder="No. int">
+                                    <input type="text" class="form-control" id="editarNumIntNavegadoraAPaciente" placeholder="No. int">
                                 </div>
                             </div>
                             <div class="col-3">
@@ -835,8 +808,7 @@
                                             <i class="fas fa-map-marker-alt"></i>
                                         </div>
                                     </div>
-                                    <input type="text" class="form-control" id="editarNumExtNavegadoraAPaciente"
-                                        placeholder="No. ext">
+                                    <input type="text" class="form-control" id="editarNumExtNavegadoraAPaciente" placeholder="No. ext">
                                 </div>
                             </div>
                         </div>
@@ -870,8 +842,7 @@
                                             <i class="fas fa-phone"></i>
                                         </div>
                                     </div>
-                                    <input type="text" class="form-control" id="editarTelNavegadoraAPaciente"
-                                        placeholder="Teléfono">
+                                    <input type="text" class="form-control" id="editarTelNavegadoraAPaciente" placeholder="Teléfono">
                                 </div>
                             </div>
 
@@ -882,8 +853,7 @@
                                             <i class="fas fa-at"></i>
                                         </div>
                                     </div>
-                                    <input type="text" class="form-control" id="editarCorreoNavegadoraAPaciente"
-                                        placeholder="Correo">
+                                    <input type="text" class="form-control" id="editarCorreoNavegadoraAPaciente" placeholder="Correo">
                                 </div>
                             </div>
 
@@ -897,8 +867,7 @@
                                             <i class="fas fa-map-marker-alt"></i>
                                         </div>
                                     </div>
-                                    <input type="text" class="form-control" id="editarColNavegadoraAPaciente"
-                                        placeholder="Colonia">
+                                    <input type="text" class="form-control" id="editarColNavegadoraAPaciente" placeholder="Colonia">
                                 </div>
                             </div>
                         </div>
@@ -930,8 +899,7 @@
                                             <i class="fas fa-user"></i>
                                         </div>
                                     </div>
-                                    <input type="text" class="form-control" id="editarNombreNavegadoraAPaciente"
-                                        placeholder="Nombre">
+                                    <input type="text" class="form-control" id="editarNombreNavegadoraAPaciente" placeholder="Nombre">
                                 </div>
                             </div>
 
@@ -942,8 +910,7 @@
                                             <i class="fas fa-id-card"></i>
                                         </div>
                                     </div>
-                                    <input type="text" class="form-control" id="editarCurpNavegadoraAPaciente"
-                                        placeholder="CURP">
+                                    <input type="text" class="form-control" id="editarCurpNavegadoraAPaciente" placeholder="CURP">
                                 </div>
                             </div>
 
@@ -957,8 +924,7 @@
                                             <i class="fas fa-user"></i>
                                         </div>
                                     </div>
-                                    <input type="text" class="form-control" id="editarPrimer-apellidoNavegadoraAPaciente"
-                                        placeholder="Primer Apellido">
+                                    <input type="text" class="form-control" id="editarPrimer-apellidoNavegadoraAPaciente" placeholder="Primer Apellido">
                                 </div>
                             </div>
 
@@ -969,8 +935,7 @@
                                             <i class="fas fa-user"></i>
                                         </div>
                                     </div>
-                                    <input type="text" class="form-control" id="editarSegundo-apellidoNavegadoraAPaciente"
-                                        placeholder="Segundo Apellido">
+                                    <input type="text" class="form-control" id="editarSegundo-apellidoNavegadoraAPaciente" placeholder="Segundo Apellido">
                                 </div>
                             </div>
                         </div>
@@ -983,8 +948,8 @@
                                             <i class="fas fa-calendar-alt"></i>
                                         </div>
                                     </div>
-                                    <input placeholder="Fecha de nacimiento" class="selectStyle form-control textbox-n"
-                                        type="text" onfocus="(this.type='date')" id="editarCumpleNavegadoraAPaciente">
+                                    <input placeholder="Fecha de nacimiento" class="selectStyle form-control textbox-n" type="text" onfocus="(this.type='date')"
+                                        id="editarCumpleNavegadoraAPaciente">
                                 </div>
                             </div>
                         </div>
@@ -997,8 +962,7 @@
                                             <i class="fas fa-user-circle"></i>
                                         </div>
                                     </div>
-                                    <input type="text" class="form-control" id="editarUsuarioNavegadoraAPaciente"
-                                        placeholder="Usuario">
+                                    <input type="text" class="form-control" id="editarUsuarioNavegadoraAPaciente" placeholder="Usuario">
                                 </div>
                             </div>
                             <div class="col-6">
@@ -1020,8 +984,7 @@
                                             <i class="fas fa-map-marker-alt"></i>
                                         </div>
                                     </div>
-                                    <input type="text" class="form-control" id="editarCalleNavegadoraAPaciente"
-                                        placeholder="Calle">
+                                    <input type="text" class="form-control" id="editarCalleNavegadoraAPaciente" placeholder="Calle">
                                 </div>
                             </div>
                             <div class="col-3">
@@ -1031,8 +994,7 @@
                                             <i class="fas fa-map-marker-alt"></i>
                                         </div>
                                     </div>
-                                    <input type="text" class="form-control" id="editarNumIntNavegadoraAPaciente"
-                                        placeholder="No. int">
+                                    <input type="text" class="form-control" id="editarNumIntNavegadoraAPaciente" placeholder="No. int">
                                 </div>
                             </div>
                             <div class="col-3">
@@ -1042,8 +1004,7 @@
                                             <i class="fas fa-map-marker-alt"></i>
                                         </div>
                                     </div>
-                                    <input type="text" class="form-control" id="editarNumExtNavegadoraAPaciente"
-                                        placeholder="No. ext">
+                                    <input type="text" class="form-control" id="editarNumExtNavegadoraAPaciente" placeholder="No. ext">
                                 </div>
                             </div>
                         </div>
@@ -1077,8 +1038,7 @@
                                             <i class="fas fa-phone"></i>
                                         </div>
                                     </div>
-                                    <input type="text" class="form-control" id="editarTelNavegadoraAPaciente"
-                                        placeholder="Teléfono">
+                                    <input type="text" class="form-control" id="editarTelNavegadoraAPaciente" placeholder="Teléfono">
                                 </div>
                             </div>
 
@@ -1089,8 +1049,7 @@
                                             <i class="fas fa-at"></i>
                                         </div>
                                     </div>
-                                    <input type="text" class="form-control" id="editarCorreoNavegadoraAPaciente"
-                                        placeholder="Correo">
+                                    <input type="text" class="form-control" id="editarCorreoNavegadoraAPaciente" placeholder="Correo">
                                 </div>
                             </div>
 
@@ -1104,8 +1063,7 @@
                                             <i class="fas fa-map-marker-alt"></i>
                                         </div>
                                     </div>
-                                    <input type="text" class="form-control" id="editarColNavegadoraAPaciente"
-                                        placeholder="Colonia">
+                                    <input type="text" class="form-control" id="editarColNavegadoraAPaciente" placeholder="Colonia">
                                 </div>
                             </div>
                         </div>
@@ -1129,8 +1087,7 @@
             </div>
         </div>
 
-        <div class="modal fade" id="modalAceptarUsuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
-            aria-hidden="true">
+        <div class="modal fade" id="modalAceptarUsuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -1151,8 +1108,8 @@
                             </div>
 
                             <div class="custom-file col-6" id="fechaNavegacion">
-                                <input placeholder="Fecha navegación" class="selectStyle form-control textbox-n" type="text"
-                                    onfocus="(this.type='date')" id="Fecha-Navegacion">
+                                <input placeholder="Fecha navegación" class="selectStyle form-control textbox-n" type="text" onfocus="(this.type='date')"
+                                    id="Fecha-Navegacion">
                             </div>
 
                             <div class="col-6 mt-3">
@@ -1160,8 +1117,7 @@
                             </div>
 
                             <div class="custom-file col-6 mt-3" id="fechaPreconsulta">
-                                <input placeholder="Fecha consulta" class="selectStyle form-control textbox-n" type="text"
-                                    onfocus="(this.type='date')" id="Fecha-Consulta">
+                                <input placeholder="Fecha consulta" class="selectStyle form-control textbox-n" type="text" onfocus="(this.type='date')" id="Fecha-Consulta">
                             </div>
 
 

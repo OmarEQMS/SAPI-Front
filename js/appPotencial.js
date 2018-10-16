@@ -11,6 +11,9 @@ $(document).ready(function () {
         delay: '140'
     });
 
+    $('#biopsiaContenedor').hide();
+    $('#biopsiaQuestion').hide();
+
     //Reemplazar el nombre del archivo en el input
     $('body').on('change', '.custom-file-input', function () {
         $(this).next('.custom-file-label').addClass("selected").html($(this).val());
@@ -164,6 +167,23 @@ $(document).ready(function () {
                 break;
             default:
                 console.log("default");
+                break;
+        }
+    });
+
+    //Checkbox biopsia
+    $('#biopsiaInput').on('change', () => {
+
+        var tieneBiopsia = $('#biopsiaInput').is(':checked') ? 1 : 0;
+
+        switch (tieneBiopsia) {
+            case 1:
+                $('#biopsiaContenedor').show();
+                $('#biopsiaQuestion').show();
+                break;
+            case 0:
+                $('#biopsiaContenedor').hide();
+                $('#biopsiaQuestion').hide();
                 break;
         }
     });
