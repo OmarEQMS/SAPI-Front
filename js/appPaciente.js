@@ -1,4 +1,4 @@
-import {validation} from './js/validaciones.js';
+import {validation} from './validaciones.js';
 
 $(document).ready(function () {
 
