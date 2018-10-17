@@ -1,12 +1,9 @@
-
-
-
-
-
-
-
-
 $(document).ready(function () {
+
+    import {validation} from '../js/validaciones.js';
+
+    //Esconder mensajes de error
+    $('#error-correo').hide();
 
     // Inicializar plug in tooltipster
     $('.questionMark').tooltipster({
@@ -219,41 +216,7 @@ $(document).ready(function () {
         delay: '140'
     });
 
-    cambiarEstadoAnimo('#animo_1','1');
-    cambiarEstadoAnimo('#animo_2','2');
-    cambiarEstadoAnimo('#animo_3','3');
-    cambiarEstadoAnimo('#animo_4','4');
-    cambiarEstadoAnimo('#animo_5','5');
-    cambiarEstadoAnimo('#animo_6','6');
-
-    function cambiarEstadoAnimo(myIdAnimo,valor){
-        $(myIdAnimo).on('click', function () {
-            $('#estadoAnimo').data("idanimo",valor);
-            console.log($('#estadoAnimo').data("idanimo"));
-        });
-    }
-
-    $('#eliminarCuentaPaciente').on('click', () => {
-
-        swal({
-            title: "¿Estás segura(o)?",
-            text: "Los datos se eliminarán y no podrás recuperarlos.",
-            icon: "warning",
-            buttons: true,
-            buttons: ['Cancelar', 'Aceptar'],
-            dangerMode: true,
-        })
-            .then((eliminar) => {
-                if (eliminar) {
-
-
-
-                } else {
-
-                }
-            });
-
-    });
+  
 
     //AGREGAR Y QUITAR TRATAMIENTOS
     $('#add-Tratamiento').on('click', function(){
@@ -293,6 +256,16 @@ $(document).ready(function () {
     });
 
 
+    //VALIDACIONES
+
+    //1.- Correo
+    $('#myEmail').on('change', function(){
+        if(validation.isValidEmail($('#myEmail'))){
+            $('#error-correo').show();
+        }else{
+            $('#error-correo').hide();
+        }
+    }); 
 
 
 

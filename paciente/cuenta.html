@@ -199,9 +199,10 @@
                         <div class="form-group row justify-content-center">
                             <div class="col-4">
                                 <label for="myEmail">Correo</label>
-                                <input type="email" class="form-control" id="myEmail" value="diego.mmtz@hotmail.com"
+                                <input type="email" class="form-control" id="myEmail"
                                     placeholder="Introduzca su correo" required pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}"
                                     />
+                                <span class="text-danger" id="error-correo">El formato no es correcto</span>
                             </div>
                             <div class="col-4">
                                 <label for="numExpediente">Número de Expediente</label>
@@ -367,6 +368,7 @@
 
     </div>
 
+    <script type="module" src="../js/validaciones.js"></script>
 
 </body>
 
