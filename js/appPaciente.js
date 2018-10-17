@@ -2,12 +2,19 @@ import {validation} from './validaciones.js';
 
 $(document).ready(function () {
 
-    //Esconder mensajes de error
+    //Esconder mensajes de error en cuenta
     $('#error-correo').hide();
     $('#error-noExpediente').hide();
     $('#error-tel').hide();
     $('#error-tipoSangre').hide();
     $('#error-notEqualPasswords').hide();
+
+    //Esconder mensajes de error en index
+    $('#error-fecha').hide();
+    $('#error-tipoCita').hide();
+    $('#error-medico').hide();
+    $('#error-edificio').hide();
+    $('#error-piso').hide();
 
     // Inicializar plug in tooltipster
     $('.questionMark').tooltipster({
@@ -211,7 +218,7 @@ $(document).ready(function () {
     });
 
 
-    //VALIDACIONES
+    //VALIDACIONES CUENTA
 
     //1.- Correo
     $('#myEmail').on('change', function(){
@@ -277,6 +284,52 @@ $(document).ready(function () {
         return true;
     }
 
+    //VALIDACIONES INDEX
+
+    //1.- Fecha
+    $('#RegistrarCita_fecha').on('change', function(){
+        if(validation.isValidDate($('#RegistrarCita_fecha'))){
+            $('#error-fecha').hide();
+        }else{
+            $('#error-fecha').show();
+        }
+    }); 
+
+    //2.- Tipo cita
+    $('#RegistrarCita_tipo').on('change', function(){
+        if(validation.isValidSelect($('#RegistrarCita_tipo'))){
+            $('#error-tipoCita').hide();
+        }else{
+            $('#error-tipoCita').show();
+        }
+    });
+
+     //3.- Médico
+     $('#RegistrarCita_medico').on('change', function(){
+        if(validation.isValidSelect($('#RegistrarCita_medico'))){
+            $('#error-medico').hide();
+        }else{
+            $('#error-medico').show();
+        }
+    });
+
+     //4.- Edificio
+     $('#RegistrarCita_edificio').on('change', function(){
+        if(validation.isValidCheckbox($('#RegistrarCita_edificio'))){
+            $('#error-edificio').hide();
+        }else{
+            $('#error-edificio').show();
+        }
+    });
+
+    //5.- Piso
+    $('#RegistrarCita_piso').on('change', function(){
+        if(validation.isValidCheckbox($('#RegistrarCita_piso'))){
+            $('#error-piso').hide();
+        }else{
+            $('#error-piso').show();
+        }
+    });
 
     
 

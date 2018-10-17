@@ -266,6 +266,7 @@
                                     <input placeholder="Fecha de tu cita" class="selectStyle form-control textbox-n" type="text" onfocus="(this.type='date')"
                                         id="RegistrarCita_fecha">
                                 </div>
+                                <span class="text-danger" id="error-fecha">No es una fecha válida.</span>
                             </div>
                         </div>
 
@@ -299,6 +300,7 @@
                                     <option value="Cirugía">Cirugía</option>
                                 </select>
                             </div>
+                            <span class="text-danger mr-4" id="error-tipoCita">No has seleccionado un tipo de cita.</span>
                         </div>
 
 
@@ -316,6 +318,7 @@
                                     <option value="Dra. Esparza 3">Dra. Cabrera</option>
                                 </select>
                             </div>
+                            <span class="text-danger mr-5" id="error-medico">No has seleccionado un médico.</span>
                         </div>
 
                         <!-- ***** Edificio ***** -->
@@ -337,10 +340,8 @@
                                     </div>
                                 </div>
                             </div>
+                            <span class="text-danger mr-5" id="error-edificio">No has seleccionado un edificio.</span>
                         </div>
-
-
-                        <!-- ***** AYUDA JULIOX ***** -->
 
                         <div class="row mb-3 justify-content-center">
                             <div class="col-10 text-center">
@@ -423,7 +424,7 @@
                             <div class="col-8">
                                 <div id="RegistrarCita_piso">
                                     <div><input class="modalRadio1" type="radio" name="Pisos" value="Piso 1" for="piso1"
-                                            checked /> <span class="badge badge-info">Planta baja</span></div>
+                                             /> <span class="badge badge-info">Planta baja</span></div>
                                     <div><input class="modalRadio2" type="radio" name="Pisos" value="Piso 2" for="piso2"
                                         />
                                         <span class="badge badge-warning">Primer piso</span></div>
@@ -431,6 +432,7 @@
                                         />
                                         <span class="badge badge-danger">Segundo piso</span></div>
                                 </div>
+                                <span class="text-danger mr-5" id="error-piso">No has seleccionado un piso.</span>
                             </div>
                         </div>
 
@@ -443,7 +445,7 @@
             </div>
         </div>
     </div>
-
+    <script type="module" src="../js/validaciones.js"></script>
 </body>
 
 </html>
