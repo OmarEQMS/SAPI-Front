@@ -212,16 +212,11 @@ $(document).ready(function () {
     //1.- Correo
     $('#myEmail').on('change', function(){
         if(validation.isValidEmail($('#myEmail'))){
-            $('#error-correo').show();
-        }else{
             $('#error-correo').hide();
+        }else{
+            $('#error-correo').show();
         }
     }); 
-
-
-
-
-
 
 
     
