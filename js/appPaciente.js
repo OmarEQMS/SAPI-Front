@@ -1,6 +1,6 @@
-$(document).ready(function () {
+import {validation} from '../js/validaciones.js';
 
-    import {validation} from '../js/validaciones.js';
+$(document).ready(function () {
 
     //Esconder mensajes de error
     $('#error-correo').hide();
