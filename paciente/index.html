@@ -12,7 +12,8 @@
     <link href="../lib/fontawesome/css/all.css" rel="stylesheet" />
     <link href='../lib/fullcalendar/fullcalendar.css' rel='stylesheet' />
     <link href="../lib/tooltipster/dist/css/tooltipster.bundle.min.css" rel="stylesheet" />
-    <link href="../lib/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-shadow.min.css" rel="stylesheet" />
+    <link href="../lib/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-shadow.min.css" rel="stylesheet"
+    />
     <link href="../lib/datatables/datatables.min.css" rel="stylesheet" type="text/css" />
     <script src="../lib/jquery/jquery-3.3.1.js" type="application/javascript"></script>
     <script src="../lib/jquery/jqueryPostGo.js" type="application/javascript"></script>
@@ -135,8 +136,8 @@
 
             <div class="row justify-content-end mb-3">
                 <div class="col-12">
-                    <i class="fas fa-info-circle float-right icono-info" style="font-size:27px" data-toggle="tooltip"
-                        data-placement="top" title="¿Tienes algún problema con tu cita? Llama al 01-800-111-11-11"> </i>
+                    <i class="fas fa-info-circle float-right icono-info" style="font-size:27px" data-toggle="tooltip" data-placement="top" title="¿Tienes algún problema con tu cita? Llama al 01-800-111-11-11">
+                    </i>
                 </div>
             </div>
 
@@ -227,14 +228,14 @@
     </div>
 
     <!-- ***** MODAL ***** -->
-    <div id="modalAgregarCita" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalRegistrarCitaLabel"
-        aria-hidden="true">
+    <div id="modalAgregarCita" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalRegistrarCitaLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
                 <!-- ***** Titulo ***** -->
                 <div class="modal-header">
                     <h5 class="modal-title text-secondary display-4" style="font-size: 25px;" id="modalRegistrarCitaLabel">Registrar
-                        Cita</h5>
+                        Cita
+                    </h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: #fff;">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -246,8 +247,8 @@
                         <!-- ***** Nota ***** -->
                         <div class="row mb-3 justify-content-center">
                             <div class="col-10 text-center bg-danger" style="border-radius:20px;">
-                                <span style="font-size: 14px;" class="text-white">Nota: El sistema no se encarga de
-                                    agendar citas en el INCan. Sólo es un recordatorio para uso personal.</span>
+                                <span style="font-size: 14px;" class="text-white">Nota: El sistema no se encarga de agendar
+                                    citas en el INCan. Sólo es un recordatorio para uso personal.</span>
                             </div>
                         </div>
 
@@ -261,8 +262,8 @@
                                     <div class="input-group-prepend">
                                         <div class="input-group-text"><i class="fas fa-calendar-alt"></i></div>
                                     </div>
-                                    <input placeholder="Fecha de tu cita" class="selectStyle form-control textbox-n"
-                                        type="text" onfocus="(this.type='date')" id="RegistrarCita_fecha">
+                                    <input placeholder="Fecha de tu cita" class="selectStyle form-control textbox-n" type="text" onfocus="(this.type='date')"
+                                        id="RegistrarCita_fecha">
                                 </div>
                             </div>
                         </div>
@@ -277,8 +278,7 @@
                                     <div class="input-group-prepend">
                                         <div class="input-group-text"><i class="fas fa-clock"></i></div>
                                     </div>
-                                    <input class="hora form-control" type="time" id="RegistrarCita_hora" min="07:00"
-                                        max="18:59" value="07:00" />
+                                    <input class="hora form-control" type="time" id="RegistrarCita_hora" min="07:00" max="18:59" value="07:00" />
                                 </div>
                             </div>
                         </div>
@@ -325,14 +325,12 @@
                             <div class="col-8">
                                 <div id="RegistrarCita_edificio">
                                     <div>
-                                        <input class="modalRadio1" type="radio" name="Edificios" value="Edificio antiguo"
-                                            for="edificio1" />
+                                        <input class="modalRadio1" type="radio" name="Edificios" value="Edificio antiguo" for="edificio1" />
                                         <span class="badge">Edificio antiguo</span>
                                         <i class="fas fa-question-circle modalInfo" id="EdAntiguo"></i>
                                     </div>
                                     <div>
-                                        <input class="modalRadio2" type="radio" name="Edificios" value="Torre de nueva hospitalización"
-                                            for="edificio2" />
+                                        <input class="modalRadio2" type="radio" name="Edificios" value="Torre de nueva hospitalización" for="edificio2" />
                                         <span class="badge">Torre nueva de hospitalización</span>
                                         <i class="fas fa-question-circle modalInfo" id="EdTorre"></i>
                                     </div>
@@ -340,39 +338,63 @@
                             </div>
                         </div>
 
-                        
-<!-- ***** AYUDA JULIOX ***** -->
+
+                        <!-- ***** AYUDA JULIOX ***** -->
 
                         <div class="row mb-3 justify-content-center">
                             <div class="col-10 text-center">
 
-                                    <pre class="infoEdificios text-center" id="feedbackEdAntiguo">
 
-<span class="badge badge-secondary mb-3" style="font-size:15px">Áreas:</span><textarea id="t1" readonly="true" style="width: 100%;" rows="6" style="display:none;">
+                                <!-- AREAS -->
+                                <div class="infoEdificios text-center row" id="feedbackEdAntiguo">
+                                    <div class="col-12">
+                                        <span class="badge badge-secondary mb-3 d-block" style="font-size:15px">Áreas:</span>
 
-• Banco de sangre           • Genética
-• Radioterapia                  • Electrocardiograma
-• Psicología                       • Clínica del dolor
-• Cuidados Paliativos   </textarea></pre>
+                                        <textarea id="t1" readonly="true" style="width: 100%;" rows="6" style="display:none;">
 
-                                    <pre class="infoEdificios justify-content-center" id="feedbackEdTorre">
-                                
+                                                        • Banco de sangre           • Genética
+                                                        • Radioterapia                  • Electrocardiograma
+                                                        • Psicología                       • Clínica del dolor
+                                                        • Cuidados Paliativos
+                                        </textarea>
+                                    </div>
+                                </div>
 
-<span class="badge badge-info mb-2" style="font-size:15px">Planta baja:</span><textarea class="plantaBajaArea" style="width: 100%;" readonly="true" style="display:none;">
+                                <!-- AREAS -->
+                                <div class="infoEdificios text-center row" id="feedbackEdTorre">
+                                    <div class="col-12">
+                                        <span class="badge badge-info mb-2 d-block" style="font-size:15px">Planta baja:</span>
 
-• Rayos- X              • Mastografía
-• Ultrasonido           • Tomografía
-• Resonancia Magnética  • PET-CT
-• MUGA                  • Gammagrafía ósea
-• Atención inmediata</textarea>
+                                        <textarea class="plantaBajaArea" style="width: 100%;" readonly="true" style="display:none;">
+
+                                                        • Rayos- X              • Mastografía
+                                                        • Ultrasonido           • Tomografía
+                                                        • Resonancia Magnética  • PET-CT
+                                                        • MUGA                  • Gammagrafía ósea
+                                                        • Atención inmediata
+                                                        </textarea>
+                                    </div>
 
 
-<span class="badge badge-warning mb-2" style="font-size:15px; color:#fff">1er Piso:</span><textarea class="primerPisoArea" style="width: 100%;" readonly="true" style="display:none;">
+                                    <div class="col-12">
+                                        <span class="badge badge-warning mb-2 d-block" style="font-size:15px; color:#fff">1er
+                                            Piso:
+                                        </span>
+                                    </div>
 
-• Laboratorio           • Farmacia</textarea>
 
+                                    <div class="col-12">
+                                        <textarea class="primerPisoArea" style="width: 100% !important;" readonly="true" style="display:none;">
 
-<span class="badge badge-danger mb-2" style="font-size:15px">2do Piso:</span><textarea class="segundoPisoArea" style="width: 100%;" readonly="true" style="display:none;">
+                                                        • Laboratorio           • Farmacia</textarea>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <span class="badge badge-danger mb-2 d-block" style="font-size:15px">2do Piso:</span>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <textarea class="segundoPisoArea" style="width: 100%;" readonly="true" style="display:none;">
 
 
 • Clínica de Mama                       • Oncología médica
@@ -383,7 +405,12 @@
 • Odontología                              •  M-8                   
 • Programa Mujer Jóven             •  Donaciones
 • Valoración cardiovascular
-• Colocación de catéteres</textarea></pre>
+• Colocación de catéteres</textarea>
+                                    </div>
+
+                                </div>
+
+                                
                             </div>
                         </div>
                         <!-- ***** Piso ***** -->
@@ -396,9 +423,11 @@
                                 <div id="RegistrarCita_piso">
                                     <div><input class="modalRadio1" type="radio" name="Pisos" value="Piso 1" for="piso1"
                                             checked /> <span class="badge badge-info">Planta baja</span></div>
-                                    <div><input class="modalRadio2" type="radio" name="Pisos" value="Piso 2" for="piso2" />
+                                    <div><input class="modalRadio2" type="radio" name="Pisos" value="Piso 2" for="piso2"
+                                        />
                                         <span class="badge badge-warning">Primer piso</span></div>
-                                    <div><input class="modalRadio3" type="radio" name="Pisos" value="Piso 3" for="piso3" />
+                                    <div><input class="modalRadio3" type="radio" name="Pisos" value="Piso 3" for="piso3"
+                                        />
                                         <span class="badge badge-danger">Segundo piso</span></div>
                                 </div>
                             </div>
