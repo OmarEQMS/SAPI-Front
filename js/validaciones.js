@@ -367,7 +367,49 @@ export const validation = {
 
         return false;
 
-    }
+    },
+
+    isValidAllergy: (input) => {
+
+        var m = input.val();
+
+        var expreg = /^[-a-zA-Z\u00E0-\u00FCñÑ. ]{2,255}$/;
+
+        if (!expreg.test(m)) {
+
+            input.css('border', '1px solid red');
+            input.css('color', 'red');
+            return false;
+
+        } else {
+            input.css('border', '');
+            input.css('color', '');
+        }
+
+        return true;
+
+    },
+
+    isValidBloodType: (input) => {
+
+        var m = input.val();
+
+        var expreg = /^(A|B|AB|O)[-+]$/;
+
+        if (!expreg.test(m)) {
+
+            input.css('border', '1px solid red');
+            input.css('color', 'red');
+            return false;
+
+        } else {
+            input.css('border', '');
+            input.css('color', '');
+        }
+
+        return true;
+
+    },
 
 
 

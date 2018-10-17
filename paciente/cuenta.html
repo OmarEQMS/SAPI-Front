@@ -8,21 +8,22 @@
 
     <title>SAPI | Inicio</title>
 
-    <link href="../lib/bootstrap/css/bootstrap.css" rel="stylesheet"/>
-    <link href="../lib/fontawesome/css/all.css" rel="stylesheet"/>
-    <link href='../lib/fullcalendar/fullcalendar.css' rel='stylesheet'/>
+    <link href="../lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="../lib/fontawesome/css/all.css" rel="stylesheet" />
+    <link href='../lib/fullcalendar/fullcalendar.css' rel='stylesheet' />
     <link href="../lib/tooltipster/dist/css/tooltipster.bundle.min.css" rel="stylesheet" />
-    <link href="../lib/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-shadow.min.css" rel="stylesheet" />
-    <link href="../lib/datatables/datatables.min.css" rel="stylesheet" type="text/css"/> 
+    <link href="../lib/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-shadow.min.css" rel="stylesheet"
+    />
+    <link href="../lib/datatables/datatables.min.css" rel="stylesheet" type="text/css" />
     <script src="../lib/jquery/jquery-3.3.1.js" type="application/javascript"></script>
     <script src="../lib/jquery/jqueryPostGo.js" type="application/javascript"></script>
     <script src="../lib/popper/popper.min.js" type="application/javascript"></script>
-    <script src="../lib/bootstrap/js/bootstrap.js" type="application/javascript"></script> 
-    <script src='../lib/moment/moment.min.js' type="application/javascript" ></script>
+    <script src="../lib/bootstrap/js/bootstrap.js" type="application/javascript"></script>
+    <script src='../lib/moment/moment.min.js' type="application/javascript"></script>
     <script src='../lib/fullcalendar/fullcalendar.js' type="application/javascript"></script>
     <script src="../lib/fullcalendar/locale-all.js"></script>
     <script src="../lib/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="../lib/tooltipster/dist/js/tooltipster.bundle.min.js" type="text/javascript" ></script>
+    <script src="../lib/tooltipster/dist/js/tooltipster.bundle.min.js" type="text/javascript"></script>
     <script src="../lib/datatables/datatables.min.js" type="text/javascript"></script>
 
     <link rel="stylesheet" href="../css/stylePaciente.css">
@@ -160,8 +161,7 @@
                         <div class="form-group row justify-content-center">
                             <div class="col-12 text-center">
                                 <label for="file-input">
-                                    <img src="../img/user.png" class="edit-image" alt="Click aquí" title="Click aquí"
-                                        width="200px" height="200px">
+                                    <img src="../img/user.png" class="edit-image" alt="Click aquí" title="Click aquí" width="200px" height="200px">
                                 </label>
                                 <input type="file" class="editar-imagen" id="file-input" />
                             </div>
@@ -200,15 +200,13 @@
                         <div class="form-group row justify-content-center">
                             <div class="col-4">
                                 <label for="myEmail">Correo</label>
-                                <input type="email" class="form-control" id="myEmail"
-                                    placeholder="Introduzca su correo" required pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}"
-                                    />
+                                <input type="email" class="form-control" id="myEmail" placeholder="Introduzca su correo" required />
                                 <span class="text-danger" id="error-correo">El formato no es correcto</span>
                             </div>
                             <div class="col-4">
                                 <label for="numExpediente">Número de Expediente</label>
-                                <input type="tel" class="form-control" id="numExpediente" pattern="[0-9]{9}"
-                                    placeholder="000123456" value="000174428" />
+                                <input type="text" class="form-control" id="numExpediente" placeholder="Introduce numero de expediente" />
+                                <span class="text-danger" id="error-noExpediente">El formato no es correcto</span>
                             </div>
                         </div>
 
@@ -216,13 +214,14 @@
                         <div class="form-group row justify-content-center">
                             <div class="col-4">
                                 <label for="telephoneNum">Teléfono</label>
-                                <input type="tel" class="form-control" id="telephoneNum" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                                    placeholder="123-456-7890" value="777-417-4428" required />
+                                <input type="text" class="form-control" id="telephoneNum" placeholder="Introduce teléfono"
+                                 required />
+                                 <span class="text-danger" id="error-tel">El formato no es correcto</span>
                             </div>
 
                             <div class="col-4">
 
-                                    <label class="form-check-label " for="etapaClinica">Etapa Clínica</label>
+                                <label class="form-check-label" for="etapaClinica">Etapa Clínica</label>
                                 <div class="input-group">
                                     <select class="form-control mt-2" id="estapaClinica">
                                         <option disabled selected>Seleccione etapa clínica</option>
@@ -240,16 +239,17 @@
 
                             </div>
                         </div>
-                        
+
                         <div class="form-group row justify-content-center">
                             <div class="col-4">
                                 <label>Tipo de sangre</label>
-                                <input type="text" class="form-control" value="O+" />
+                                <input type="text" class="form-control" id="tipo-sangre" placeholder="Introduce tipo de sangre" />
+                                <span class="text-danger" id="error-tipoSangre">El formato no es correcto</span>
                             </div>
                             <div class="col-4">
                                 <label for="myPRZ">PRZ</label>
-                                <input type="text" class="form-control" id="myPRZ" pattern="[0-9]{9}" placeholder="000123456"
-                                    value="000174428" readonly />
+                                <input type="text" class="form-control" id="myPRZ" value="UA7AJA8" readonly
+                                />
                             </div>
                         </div>
 
@@ -260,9 +260,9 @@
                                 <label for="tratamiento">Tratamientos</label>
                             </div>
                             <div class="col-1">
-                                
+
                             </div>
-                            
+
                         </div>
 
                         <div id="tratamientos">
@@ -286,7 +286,7 @@
                                 <div class="col-1">
                                     <button type="button" id="add-Tratamiento" class="btn btn-morado" style="border-radius: 25px;">
                                         <i class="fas fa-plus"></i>
-                                        </button>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -304,8 +304,8 @@
                         <!-- 6 -->
                         <div class="form-group row justify-content-center mt-3">
                             <div class="col-4">
-                                <button type="button" class="btn btn-outline-info btn-block" id="btn-contraseña" style="border-radius:20px"
-                                    data-toggle="modal" data-target="#modalCambiarContraseña">
+                                <button type="button" class="btn btn-outline-info btn-block" id="btn-contraseña" style="border-radius:20px" data-toggle="modal"
+                                    data-target="#modalCambiarContraseña">
                                     <i class="fas fa-key mr-1"></i>
                                     Cambiar Contraseña</button>
                             </div>
@@ -319,8 +319,7 @@
 
                         <div class="form-group row justify-content-center mt-4">
                             <div class="col-4">
-                                <button type="button" class="btn btn-outline-danger btn-block" style="border-radius:20px"
-                                    id="eliminarCuentaPaciente">
+                                <button type="button" class="btn btn-outline-danger btn-block" style="border-radius:20px" id="eliminarCuentaPaciente">
                                     <i class="fas fa-trash-alt mr-1"></i>
                                     Eliminar Cuenta</button>
                             </div>
@@ -334,8 +333,7 @@
         </div>
 
         <!-- ********** MODAL EDITAR CONTRASEÑA **********-->
-        <div class="modal fade" id="modalCambiarContraseña" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
+        <div class="modal fade" id="modalCambiarContraseña" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -354,13 +352,18 @@
                         <div class="form-row">
                             <div class="form-group col-12">
                                 <label for="name">Confirma tu contraseña</label>
-                                <input type="password" class="form-control" id="password2" placeholder="Reingresa tu nueva contraseña" />
+                                <input type="password" class="form-control" id="password-confirm" placeholder="Reingresa tu nueva contraseña" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <span class="text-danger" id="error-notEqualPasswords">Las contraseñas no son iguales</span>
                             </div>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" style="border-radius: 20px" data-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn btn-primary" style="border-radius: 20px">Cambiar contraseña</button>
+                        <button type="button" class="btn btn-primary" id="btn-updatePassword" style="border-radius: 20px">Cambiar contraseña</button>
                     </div>
                 </div>
             </div>

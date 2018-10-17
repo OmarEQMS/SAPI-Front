@@ -4,6 +4,10 @@ $(document).ready(function () {
 
     //Esconder mensajes de error
     $('#error-correo').hide();
+    $('#error-noExpediente').hide();
+    $('#error-tel').hide();
+    $('#error-tipoSangre').hide();
+    $('#error-notEqualPasswords').hide();
 
     // Inicializar plug in tooltipster
     $('.questionMark').tooltipster({
@@ -217,6 +221,61 @@ $(document).ready(function () {
             $('#error-correo').show();
         }
     }); 
+
+    //2.- No expediente
+    $('#numExpediente').on('change', function(){
+        if(validation.isValidNoExpediente($('#numExpediente'))){
+            $('#error-noExpediente').hide();
+        }else{
+            $('#error-noExpediente').show();
+        }
+    }); 
+
+    //3.- Telefono
+    $('#telephoneNum').on('change', function(){
+        if(validation.isValidPhoneNumber($('#telephoneNum'))){
+            $('#error-tel').hide();
+        }else{
+            $('#error-tel').show();
+        }
+    }); 
+
+    //4.- Tipo Sangre
+    $('#tipo-sangre').on('change', function(){
+        if(validation.isValidBloodType($('#tipo-sangre'))){
+            $('#error-tipoSangre').hide();
+        }else{
+            $('#error-tipoSangre').show();
+        }
+    });
+
+    //Verificar que las contraseñas son iguales
+    $('#password-confirm').on('change', function(){
+
+        areEqualPasswords($('#password'), $('#password-confirm'));
+
+    });
+
+    function areEqualPasswords(pass1, pass2) {
+
+        if (pass1.val() != pass2.val()) {
+
+            pass2.css('border', '1px solid red');
+            pass1.css('border', '1px solid red');
+            $('#error-notEqualPasswords').show();
+
+            return false;
+
+        } else {
+
+            pass2.css('border', '');
+            pass1.css('border', '');
+            $('#error-notEqualPasswords').hide();
+
+        }
+
+        return true;
+    }
 
 
     
