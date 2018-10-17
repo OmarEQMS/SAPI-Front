@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 $(document).ready(function () {
 
     // Inicializar plug in tooltipster
@@ -283,5 +291,15 @@ $(document).ready(function () {
         $(this).parent().parent().remove();
 
     });
+
+
+
+
+
+
+
+
+
+    
 
 });

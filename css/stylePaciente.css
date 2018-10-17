@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700');
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 /* ---------------------------------------------------
     GENERALES
@@ -53,6 +54,18 @@
 
 .btn-morado-solid:hover{
     background: #362372;
+}
+
+.segundoPisoArea{
+    height: 250px;
+}
+
+.primerPisoArea{
+    height: 60px;
+}
+
+.plantaBajaArea{
+    height: 150px;
 }
 
 
@@ -417,6 +430,7 @@ a.article:hover {
 
 textarea{
     font-family: 'Nunito Sans';
+    
 }
 
 /* ---------------------------------------------------
