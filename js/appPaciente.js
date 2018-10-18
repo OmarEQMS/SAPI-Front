@@ -36,44 +36,6 @@ $(document).ready(function () {
     });
 
 
-
-    $("#btn-eliminarSintoma").on('click', function(){
-        var id = $(this).data('id');
-        console.log(id);
-
-        //Modal borrar sintoma
-        swal({
-            title: "Estás a punto de eliminar este sintoma:",
-            text: "-Dolor Muscular",
-            icon: "warning",
-            buttons: true,
-            buttons: ['Cancelar', 'Aceptar'],
-            dangerMode: true,
-        })
-            .then((eliminar) => {
-                if (eliminar) {
-                    $.ajax({
-                        url: ''/*VACIO POR EL MOMENTO*/,
-                        cache: false,
-                        method: 'POST',
-                        data: {
-                            key: '',//FALTA DEFINIR 'key', PUEDE SER "borrar",
-                            idSintoma: id
-                        }
-                    })
-                    .done(function (response) {
-                        console.log(response);
-                    })
-                    .fail(function (xhr, textStatus, errorThrown) {
-                        console.log(xhr.responseText);
-                    });
-                } else {
-
-                }
-            });
-
-    });
-
     ///////////////////////////////NAVEGADORAS
     $("#tablaSintomas").DataTable({
         "searching": false,
@@ -122,56 +84,6 @@ $(document).ready(function () {
 
     });
 
-    $('#btnAgregarSintoma').on('click', function () {
-
-        swal({
-            html: true, /*Julio, la consola me dijo esto
-                        SweetAlert warning: "html" option has been deprecated. Please use "content" instead.*/
-            title: "Estas apunto de agregar este sintoma:",
-            text: "-Dolor Muscular \n \n Se recomienda poner en contacto con su medico",
-            icon: "warning",
-            buttons: true,
-            buttons: ['Cancelar', 'Aceptar'],
-            dangerMode: true,
-        })
-            .then((agregar) => {
-                if (agregar) {
-                     $.ajax({
-                        url: ''/*VACIO POR EL MOMENTO*/,
-                        cache: false,
-                        method: 'POST',
-                        data: {
-                            key: '',//FALTA DEFINIR 'key', PUEDE SER "agregar",
-                            /*$('#estadoAnimo').data("idAnimo")*/
-                            Animo: $('#estadoAnimo').data("idanimo"),
-                            Peso: $('#inputPeso').val(),
-                            Pulso: $('#inputPulso').val(),
-                            Presion: $('#inputPresion').val(),
-                            Glucosa: $('#inputGlucosa').val(),
-                            Oxigenacion: $('#inputOxigenacion').val(),
-                            Temperatura: $('#inputTemperatura').val()
-                            /*FALTAN SLIDERS*/
-                        }
-                    })
-                    .done(function (response) {
-                        console.log(response);
-                    })
-                    .fail(function (xhr, textStatus, errorThrown) {
-                        console.log(xhr.responseText);
-                    });
-                    console.log($('#estadoAnimo').data("idanimo"));
-                    console.log($('#inputPeso').val());
-                    console.log($('#inputPulso').val());
-                    console.log($('#inputPresion').val());
-                    console.log($('#inputGlucosa').val());
-                    console.log($('#inputOxigenacion').val());
-                    console.log($('#inputTemperatura').val());
-                } else {
-
-                }
-            });
-
-    });
 
 
     $('[data-toggle="tooltip"]').tooltipster({
@@ -324,22 +236,22 @@ $(document).ready(function () {
     });
 
      //4.- Edificio
-     $('#RegistrarCita_edificioAntiguo') || $('#RegistrarCita_edificioNuevo').on('change', function(){
-        if(validation.isValidCheckbox($('#RegistrarCita_edificioAntiguo' || '#RegistrarCita_edificioNuevo'))){
-            $('#error-edificio').hide();
-        }else{
-            $('#error-edificio').show();
-        }
-    });
+    //  $('#RegistrarCita_edificioAntiguo') || $('#RegistrarCita_edificioNuevo').on('change', function(){
+    //     if(validation.isValidCheckbox($('#RegistrarCita_edificioAntiguo' || '#RegistrarCita_edificioNuevo'))){
+    //         $('#error-edificio').hide();
+    //     }else{
+    //         $('#error-edificio').show();
+    //     }
+    // });
 
     //5.- Piso
-    $('#RegistrarCita_piso').on('change', function(){
-        if(validation.isValidCheckbox($('#RegistrarCita_piso'))){
-            $('#error-piso').hide();
-        }else{
-            $('#error-piso').show();
-        }
-    });
+    // $('#RegistrarCita_piso').on('change', function(){
+    //     if(validation.isValidCheckbox($('#RegistrarCita_piso'))){
+    //         $('#error-piso').hide();
+    //     }else{
+    //         $('#error-piso').show();
+    //     }
+    // });
 
     
 

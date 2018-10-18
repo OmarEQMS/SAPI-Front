@@ -227,7 +227,7 @@ $(document).ready(function () {
 
     //1.- Identificación oficial
     $('#fileIdentificacion').on('change', function(){
-        if(validation.validDocument($('#fileIdentificacion'))){
+        if(validation.validDocument($('#fileIdentificacion'), document.querySelector('#fileIdentificacion').files)){
             $('#error-identificacionOficial').hide();
         }else{
             $('#error-identificacionOficial').show();
@@ -236,7 +236,7 @@ $(document).ready(function () {
 
     //2.- CURP
     $('#fileCURP').on('change', function(){
-        if(validation.validDocument($('#fileCURP'))){
+        if(validation.validDocument($('#fileCURP'), document.querySelector('#fileCURP').files)){
             $('#error-CURP').hide();
         }else{
             $('#error-CURP').show();
@@ -245,7 +245,7 @@ $(document).ready(function () {
 
     //3.- Comprobante de docimicilio
     $('#fileComprobanteDomicilio').on('change', function(){
-        if(validation.validDocument($('#fileComprobanteDomicilio'))){
+        if(validation.validDocument($('#fileComprobanteDomicilio'),document.querySelector('#fileComprobanteDomicilio').files)){
             $('#error-comprobanteDomicilio').hide();
         }else{
             $('#error-comprobanteDomicilio').show();
@@ -263,7 +263,7 @@ $(document).ready(function () {
 
     //5.- Estudios previos masto
     $('#fileEstudioPrevioMasto').on('change', function(){
-        if(validation.validDocument($('#fileEstudioPrevioMasto'))){
+        if(validation.validDocument($('#fileEstudioPrevioMasto'),document.querySelector('#fileEstudioPrevioMasto').files)){
             $('#error-previoMasto').hide();
         }else{
             $('#error-previoMasto').show();
@@ -272,7 +272,7 @@ $(document).ready(function () {
 
     //6.- Estudios previos usg
     $('#fileEstudioPrevioUsg').on('change', function(){
-        if(validation.validDocument($('#fileEstudioPrevioUsg'))){
+        if(validation.validDocument($('#fileEstudioPrevioUsg'),document.querySelector('#fileEstudioPrevioUsg').files)){
             $('#error-previoUsg').hide();
         }else{
             $('#error-previoUsg').show();
@@ -281,7 +281,7 @@ $(document).ready(function () {
 
     //7.- Biopsia previa
     $('#fileEstudioBiopsia').on('change', function(){
-        if(validation.validDocument($('#fileEstudioBiopsia'))){
+        if(validation.validDocument($('#fileEstudioBiopsia'),document.querySelector('#fileEstudioBiopsia').files)){
             $('#error-biopsia').hide();
         }else{
             $('#error-biopsia').show();
