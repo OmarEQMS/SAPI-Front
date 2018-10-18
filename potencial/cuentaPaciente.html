@@ -182,13 +182,14 @@
                             <div class="col-4">
                                 <label for="myEmail">Correo</label>
                                 <input type="email" class="form-control" id="myEmail" value="diego.mmtz@hotmail.com" placeholder="Introduzca su correo" required
-                                    pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}"
                                     />
+                                    <span class="text-danger" id="error-correo">El formato no es correcto, introduce un mínimo de 2 y un máximo de 254 caracteres.</span>
                             </div>
                             <div class="col-4">
                                 <label for="telephoneNum">Teléfono</label>
-                                <input type="tel" class="form-control" id="telephoneNum" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890"
-                                    value="777-417-4428" required />
+                                <input type="tel" class="form-control" id="telephoneNum" placeholder="Introduzca su número telefónico"
+                                     required />
+                                     <span class="text-danger" id="error-tel">El formato no es correcto, deben ser 10 dígitos.</span>
                             </div>
                         </div>
 
@@ -257,10 +258,20 @@
                                 <input type="password" class="form-control" id="password" placeholder="Ingresa tu nueva contraseña" />
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <span class="text-danger" id="error-contraseña">La contraseña debe tener al menos 1 número, 1 letra minúscula, 1 mayúscula y una extensión de 8 a 14 caracteres.</span>
+                            </div>
+                        </div>
                         <div class="form-row">
                             <div class="form-group col-12">
                                 <label for="name">Confirma tu contraseña</label>
-                                <input type="password" class="form-control" id="password2" placeholder="Reingresa tu nueva contraseña" />
+                                <input type="password" class="form-control" id="password-confirm" placeholder="Reingresa tu nueva contraseña" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <span class="text-danger" id="error-notEqualPasswords">Las contraseñas no son iguales.</span>
                             </div>
                         </div>
                     </div>

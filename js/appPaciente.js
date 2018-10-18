@@ -7,6 +7,7 @@ $(document).ready(function () {
     $('#error-noExpediente').hide();
     $('#error-tel').hide();
     $('#error-tipoSangre').hide();
+    $('#error-contraseña').hide();
     $('#error-notEqualPasswords').hide();
 
     //Esconder mensajes de error en index
@@ -256,6 +257,15 @@ $(document).ready(function () {
         }
     });
 
+    //5.- Contraseña
+    $('#password').on('change', function(){
+        if(validation.isValidBloodType($('#password'))){
+            $('#error-contraseña').hide();
+        }else{
+            $('#error-contraseña').show();
+        }
+    });
+
     //Verificar que las contraseñas son iguales
     $('#password-confirm').on('change', function(){
 
@@ -314,8 +324,8 @@ $(document).ready(function () {
     });
 
      //4.- Edificio
-     $('#RegistrarCita_edificio').on('change', function(){
-        if(validation.isValidCheckbox($('#RegistrarCita_edificio'))){
+     $('#RegistrarCita_edificioAntiguo') || $('#RegistrarCita_edificioNuevo').on('change', function(){
+        if(validation.isValidCheckbox($('#RegistrarCita_edificioAntiguo' || '#RegistrarCita_edificioNuevo'))){
             $('#error-edificio').hide();
         }else{
             $('#error-edificio').show();

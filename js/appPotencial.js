@@ -1,4 +1,21 @@
+import {validation} from './validaciones.js';
+
 $(document).ready(function () {
+
+    //Esconder mensajes de error en cuenta
+    $('#error-correo').hide();
+    $('#error-tel').hide();
+    $('#error-contraseña').hide();
+    $('#error-notEqualPasswords').hide();
+
+    //Esconder mensajes de error en index
+    $('#error-identificacionOficial').hide();
+    $('#error-CURP').hide();
+    $('#error-comprobanteDomicilio').hide();
+    $('#error-motivoConsulta').hide();
+    $('#error-previoMasto').hide();
+    $('#error-previoUsg').hide();
+    $('#error-biopsia').hide();
 
     // Inicializar plug in tooltipster
     $('.questionMark').tooltipster({
@@ -14,6 +31,7 @@ $(document).ready(function () {
     $('#biopsiaContenedor').hide();
     $('#biopsiaQuestion').hide();
 
+
     //Reemplazar el nombre del archivo en el input
     $('body').on('change', '.custom-file-input', function () {
         $(this).next('.custom-file-label').addClass("selected").html($(this).val());
@@ -25,46 +43,6 @@ $(document).ready(function () {
         $('.collapse.in').toggleClass('in');
         $('a[aria-expanded=true]').attr('aria-expanded', 'false');
     });
-
-    //Inicializar el calendario
-    $('#calendarCitas').fullCalendar({
-        locale: 'es',
-        height: 630,
-        themeSystem: 'bootstrap4',
-        header: {
-            left: 'prev,next today',
-            center: 'month,agendaWeek,agendaDay',
-            right: 'title'
-        },
-        eventBackgroundColor: "#eb5865",
-        eventBorderColor: "#de1f1f",
-        eventLimit: true, // allow "more" link when too many events
-        eventClick: function () {
-            $('#modalVerCitaPreConsulta').modal('toggle');
-
-        },
-        events: [
-            {
-                title: 'Preconsulta',
-                start: '2018-09-30'
-            },
-            {
-                title: 'Navegación',
-                start: '2018-09-30'
-            }
-        ]
-    });
-
-
-    //Cambiar de color los botones del calendario y varios textos
-    $('.fc-agendaWeek-button').removeClass('btn-primary').addClass('btn-outline-danger');
-    $('.fc-month-button').removeClass('btn-primary').addClass('btn-outline-danger');
-    $('.fc-agendaDay-button').removeClass('btn-primary').addClass('btn-outline-danger');
-    $('.fc-prev-button').removeClass('btn-primary').addClass('btn-outline-danger');
-    $('.fc-next-button').removeClass('btn-primary').addClass('btn-outline-danger');
-    $('.fc-today-button').removeClass('btn-primary').addClass('btn-outline-danger');
-    $('.fc-right h2').addClass('display-4').css({ 'color': '#696f71', 'font-size': '30px' });
-
 
     $("#motivoConsulta").on('change', () => {
 
@@ -187,6 +165,130 @@ $(document).ready(function () {
                 break;
         }
     });
+
+    //VALIDACIONES CUENTA
+
+    //1.- Correo
+    $('#myEmail').on('change', function(){
+        if(validation.isValidEmail($('#myEmail'))){
+            $('#error-correo').hide();
+        }else{
+            $('#error-correo').show();
+        }
+    }); 
+
+    //2.- Telefono
+    $('#telephoneNum').on('change', function(){
+        if(validation.isValidPhoneNumber($('#telephoneNum'))){
+            $('#error-tel').hide();
+        }else{
+            $('#error-tel').show();
+        }
+    }); 
+
+     //3.- Contraseña
+     $('#password').on('change', function(){
+        if(validation.isValidBloodType($('#password'))){
+            $('#error-contraseña').hide();
+        }else{
+            $('#error-contraseña').show();
+        }
+    });
+
+    //Verificar que las contraseñas son iguales
+    $('#password-confirm').on('change', function(){
+
+        areEqualPasswords($('#password'), $('#password-confirm'));
+
+    });
+
+    function areEqualPasswords(pass1, pass2) {
+
+        if (pass1.val() != pass2.val()) {
+
+            pass2.css('border', '1px solid red');
+            pass1.css('border', '1px solid red');
+            $('#error-notEqualPasswords').show();
+
+            return false;
+
+        } else {
+
+            pass2.css('border', '');
+            pass1.css('border', '');
+            $('#error-notEqualPasswords').hide();
+
+        }
+
+        return true;
+    }
+
+     //VALIDACIONES INDEX
+
+    //1.- Identificación oficial
+    $('#fileIdentificacion').on('change', function(){
+        if(validation.validDocument($('#fileIdentificacion'))){
+            $('#error-identificacionOficial').hide();
+        }else{
+            $('#error-identificacionOficial').show();
+        }
+    }); 
+
+    //2.- CURP
+    $('#fileCURP').on('change', function(){
+        if(validation.validDocument($('#fileCURP'))){
+            $('#error-CURP').hide();
+        }else{
+            $('#error-CURP').show();
+        }
+    }); 
+
+    //3.- Comprobante de docimicilio
+    $('#fileComprobanteDomicilio').on('change', function(){
+        if(validation.validDocument($('#fileComprobanteDomicilio'))){
+            $('#error-comprobanteDomicilio').hide();
+        }else{
+            $('#error-comprobanteDomicilio').show();
+        }
+    }); 
+
+    //4.- Motivo de consulta
+    $('#motivoConsulta').on('change', function(){
+        if(validation.isValidSelect($('#motivoConsulta'))){
+            $('#error-motivoConsulta').hide();
+        }else{
+            $('#error-motivoConsulta').show();
+        }
+    }); 
+
+    //5.- Estudios previos masto
+    $('#fileEstudioPrevioMasto').on('change', function(){
+        if(validation.validDocument($('#fileEstudioPrevioMasto'))){
+            $('#error-previoMasto').hide();
+        }else{
+            $('#error-previoMasto').show();
+        }
+    }); 
+
+    //6.- Estudios previos usg
+    $('#fileEstudioPrevioUsg').on('change', function(){
+        if(validation.validDocument($('#fileEstudioPrevioUsg'))){
+            $('#error-previoUsg').hide();
+        }else{
+            $('#error-previoUsg').show();
+        }
+    }); 
+
+    //7.- Biopsia previa
+    $('#fileEstudioBiopsia').on('change', function(){
+        if(validation.validDocument($('#fileEstudioBiopsia'))){
+            $('#error-biopsia').hide();
+        }else{
+            $('#error-biopsia').show();
+        }
+    });
+
+    
 
 
 });
