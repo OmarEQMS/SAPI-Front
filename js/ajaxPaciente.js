@@ -15,7 +15,6 @@ $(document).ready(function () {
                 hora: $('#RegistrarCita_hora').val(),
                 tipo: $('#RegistrarCita_tipo').val(),
                 medico: $('#RegistrarCita_medico').val(),
-                edificio: $('input[name=name_of_your_radiobutton]:checked').val(),
                 
             }
         })
