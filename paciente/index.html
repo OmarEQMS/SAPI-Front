@@ -12,8 +12,7 @@
     <link href="../lib/fontawesome/css/all.css" rel="stylesheet" />
     <link href='../lib/fullcalendar/fullcalendar.css' rel='stylesheet' />
     <link href="../lib/tooltipster/dist/css/tooltipster.bundle.min.css" rel="stylesheet" />
-    <link href="../lib/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-shadow.min.css" rel="stylesheet"
-    />
+    <link href="../lib/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-shadow.min.css" rel="stylesheet" />
     <link href="../lib/datatables/datatables.min.css" rel="stylesheet" type="text/css" />
     <script src="../lib/jquery/jquery-3.3.1.js" type="application/javascript"></script>
     <script src="../lib/jquery/jqueryPostGo.js" type="application/javascript"></script>
@@ -137,7 +136,8 @@
 
             <div class="row justify-content-end mb-3">
                 <div class="col-12">
-                    <i class="fas fa-info-circle float-right icono-info" style="font-size:27px" data-toggle="tooltip" data-placement="top" title="¿Tienes algún problema con tu cita? Llama al 01-800-111-11-11">
+                    <i class="fas fa-info-circle float-right icono-info" style="font-size:27px" data-toggle="tooltip"
+                        data-placement="top" title="¿Tienes algún problema con tu cita? Llama al 01-800-111-11-11">
                     </i>
                 </div>
             </div>
@@ -229,7 +229,8 @@
     </div>
 
     <!-- ***** MODAL ***** -->
-    <div id="modalAgregarCita" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalRegistrarCitaLabel" aria-hidden="true">
+    <div id="modalAgregarCita" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalRegistrarCitaLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
                 <!-- ***** Titulo ***** -->
@@ -248,7 +249,8 @@
                         <!-- ***** Nota ***** -->
                         <div class="row mb-3 justify-content-center">
                             <div class="col-10 text-center bg-danger" style="border-radius:20px;">
-                                <span style="font-size: 14px;" class="text-white">Nota: El sistema no se encarga de agendar
+                                <span style="font-size: 14px;" class="text-white">Nota: El sistema no se encarga de
+                                    agendar
                                     citas en el INCan. Sólo es un recordatorio para uso personal.</span>
                             </div>
                         </div>
@@ -264,7 +266,7 @@
                                         <div class="input-group-text"><i class="fas fa-calendar-alt"></i></div>
                                     </div>
                                     <input placeholder="Fecha de tu cita" class="form-control" type="text" onfocus="(this.type='date')"
-                                        id="RegistrarCita_fecha">    
+                                        id="RegistrarCita_fecha">
                                 </div>
                                 <span class="text-danger" id="error-fecha">No es una fecha válida.</span>
                             </div>
@@ -280,7 +282,8 @@
                                     <div class="input-group-prepend">
                                         <div class="input-group-text"><i class="fas fa-clock"></i></div>
                                     </div>
-                                    <input class="hora form-control" type="time" id="RegistrarCita_hora" min="07:00" max="18:59" />
+                                    <input class="hora form-control" type="time" id="RegistrarCita_hora" min="07:00"
+                                        max="18:59" />
                                 </div>
                             </div>
                         </div>
@@ -301,7 +304,7 @@
                                 </select>
                                 <span class="text-danger mr-4" id="error-tipoCita">No has seleccionado un tipo de cita.</span>
                             </div>
-                            
+
                         </div>
 
 
@@ -320,7 +323,7 @@
                                 </select>
                                 <span class="text-danger mr-5" id="error-medico">No has seleccionado un médico.</span>
                             </div>
-                            
+
                         </div>
 
                         <!-- ***** Edificio Ayuda Juliox *****-->
@@ -331,103 +334,95 @@
                             <div class="col-8">
                                 <div>
                                     <div>
-                                        <input class="modalRadio1" id="RegistrarCita_edificioAntiguo" type="radio" name="Edificios" value="Edificio antiguo" />
+                                        <input class="modalRadio1" id="RegistrarCita_edificioAntiguo" type="radio" name="Edificios"
+                                            value="Edificio antiguo" />
                                         <span class="badge">Edificio antiguo</span>
                                         <a href="#" class="questionMark" data-tooltip-content="#tooltip_contentInfoTorreAntigua"><i
-                                            class="fas fa-question-circle icono-infoTorre" style="font-size:17px" id="EdAntiguo"></i></a>
+                                                class="fas fa-question-circle icono-infoTorre" style="font-size:17px"
+                                                id="EdAntiguo"></i></a>
                                     </div>
-                                    
+
                                     <div>
-                                        <input class="modalRadio2" id="RegistrarCita_edificioNuevo" type="radio" name="Edificios" value="Torre de nueva hospitalización" />
+                                        <input class="modalRadio2" id="RegistrarCita_edificioNuevo" type="radio" name="Edificios"
+                                            value="Torre de nueva hospitalización" />
                                         <span class="badge">Torre nueva de hospitalización</span>
                                         <a href="#" class="questionMark" data-tooltip-content="#tooltip_contentInfoTorreNueva"><i
-                                            class="fas fa-question-circle icono-infoTorre" style="font-size:17px" id="EdTorre"></i></a>
+                                                class="fas fa-question-circle icono-infoTorre" style="font-size:17px"
+                                                id="EdTorre"></i></a>
                                     </div>
 
                                     <div class="tooltip_templates">
-                                            <span id="tooltip_contentInfoTorreAntigua">
-                                                <span>Recuerda:</span>
-                                                <ul>
-                                                    <li> <span class="badge badge-danger"><span class="ocultaBadge">CC</span></span>
-                                                        <span class="">Rojo: Formulario sin empezar.
-                                                        </span>
-                                                    </li>
-                                                    <li> <span class="badge badge-warning"><span class="ocultaBadge">CC</span></span>
-                                                        <span class="">Amarillo: Formulario empezado.
-                                                        </span>
-                                                    </li>
-                                                    <li> <span class="badge badge-info"><span class="ocultaBadge">CC</span></span>
-                                                        <span class="">Azul: Formulario completo hasta la penúltima página.
-                                                        </span>
-                                                    </li>
-                                                    <li> <span class="badge badge-success"><span class="ocultaBadge">CC</span></span>
-                                                        <span class="">Verde: Formulario completo.
-                                                        </span>
-                                                    </li>
-                                                </ul>
-                                            </span>
-                                            </span>
-        
-                                        </div>
+                                        <span id="tooltip_contentInfoTorreAntigua">
+                                            <span class="badge badge-secondary mb-3 d-block" style="font-size:15px">Áreas:</span>
+
+                                            <textarea id="t1" readonly="true" style="width: 100%;" rows="6" style="display:none;">
+
+                                                        • Banco de sangre           • Genética
+                                                        • Radioterapia                  • Electrocardiograma
+                                                        • Psicología                       • Clínica del dolor
+                                                        • Cuidados Paliativos
+                                        </textarea>
+                                        </span>
+                                        </span>
+
+                                    </div>
 
 
-                                        <div class="tooltip_templates">
-                                                <span id="tooltip_contentInfoTorreNueva">
-                                                    <span>Recuerda:</span>
-                                                    <ul>
-                                                        <li> <span class="badge badge-danger"><span class="ocultaBadge">CC</span></span>
-                                                            <span class="">Rojo: Formulario sin empezar.
-                                                            </span>
-                                                        </li>
-                                                        <li> <span class="badge badge-warning"><span class="ocultaBadge">CC</span></span>
-                                                            <span class="">Amarillo: Formulario empezado.
-                                                            </span>
-                                                        </li>
-                                                        <li> <span class="badge badge-info"><span class="ocultaBadge">CC</span></span>
-                                                            <span class="">Azul: Formulario completo hasta la penúltima página.
-                                                            </span>
-                                                        </li>
-                                                        <li> <span class="badge badge-success"><span class="ocultaBadge">CC</span></span>
-                                                            <span class="">Verde: Formulario completo.
-                                                            </span>
-                                                        </li>
-                                                    </ul>
-                                                </span>
-                                                </span>
-            
-                                            </div>
+                                    <div class="tooltip_templates">
+                                        <span id="tooltip_contentInfoTorreNueva">
+                                            <span>Recuerda:</span>
+                                            <ul>
+                                                <li> <span class="badge badge-danger"><span class="ocultaBadge">CC</span></span>
+                                                    <span class="">Rojo: Formulario sin empezar.
+                                                    </span>
+                                                </li>
+                                                <li> <span class="badge badge-warning"><span class="ocultaBadge">CC</span></span>
+                                                    <span class="">Amarillo: Formulario empezado.
+                                                    </span>
+                                                </li>
+                                                <li> <span class="badge badge-info"><span class="ocultaBadge">CC</span></span>
+                                                    <span class="">Azul: Formulario completo hasta la penúltima página.
+                                                    </span>
+                                                </li>
+                                                <li> <span class="badge badge-success"><span class="ocultaBadge">CC</span></span>
+                                                    <span class="">Verde: Formulario completo.
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </span>
+                                        </span>
+
+                                    </div>
 
 
 
                                 </div>
                                 <span class="text-danger mr-5" id="error-edificio">No has seleccionado un edificio.</span>
-                            </div>  
-                        </div> 
+                            </div>
+                        </div>
 
-                        
+
 
 
                         <!-- ***** Piso ***** -->
 
-                         <div class="row mb-3 justify-content-center btns-pisos" id="pisosDiv">
+                        <div class="row mb-3 justify-content-center btns-pisos" id="pisosDiv">
                             <div class="col-1" data-toggle="tooltip" data-placement="top" title="Seleccione el tipo de su cita"><i
                                     class="fas fa-question-circle modalInfo"></i></div>
                             <div class="col-2"> <span class="colorGlobal">Piso:</span></div>
 
                             <div class="col-8">
                                 <div id="RegistrarCita_piso">
-                                    <div><input class="modalRadio1" type="radio" name="Pisos" value="Planta Baja" for="piso1"
-                                             /> <span class="badge badge-info">Planta baja</span></div>
-                                    <div><input class="modalRadio2" type="radio" name="Pisos" value="Piso 1" for="piso2"
-                                        />
+                                    <div><input class="modalRadio1" type="radio" name="Pisos" value="Planta Baja" for="piso1" />
+                                        <span class="badge badge-info">Planta baja</span></div>
+                                    <div><input class="modalRadio2" type="radio" name="Pisos" value="Piso 1" for="piso2" />
                                         <span class="badge badge-warning">Primer piso</span></div>
-                                    <div><input class="modalRadio3" type="radio" name="Pisos" value="Piso 2" for="piso2"
-                                        />
+                                    <div><input class="modalRadio3" type="radio" name="Pisos" value="Piso 2" for="piso2" />
                                         <span class="badge badge-danger">Segundo piso</span></div>
                                 </div>
                                 <span class="text-danger mr-5" id="error-piso">No has seleccionado un piso.</span>
                             </div>
-                        </div> 
+                        </div>
 
                     </div>
                     <div class="modal-footer">
