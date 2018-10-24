@@ -323,7 +323,7 @@
                             
                         </div>
 
-                        <!-- ***** Edificio *****
+                        <!-- ***** Edificio Ayuda Juliox *****-->
                         <div class="row mb-3 justify-content-center">
                             <div class="col-1" data-toggle="tooltip" data-placement="top" title="Seleccione el edificio de su cita"><i
                                     class="fas fa-question-circle modalInfo"></i></div>
@@ -333,95 +333,83 @@
                                     <div>
                                         <input class="modalRadio1" id="RegistrarCita_edificioAntiguo" type="radio" name="Edificios" value="Edificio antiguo" />
                                         <span class="badge">Edificio antiguo</span>
-                                        <i class="fas fa-question-circle modalInfo" id="EdAntiguo"></i>
+                                        <a href="#" class="questionMark" data-tooltip-content="#tooltip_contentInfoTorreAntigua"><i
+                                            class="fas fa-question-circle icono-infoTorre" style="font-size:17px" id="EdAntiguo"></i></a>
                                     </div>
+                                    
                                     <div>
-                                        <input class="modalRadio2" id="RegistrarCita_edificioNuevo" type="radio" name="Edificios" value="Torre de nueva hospitalización"  />
+                                        <input class="modalRadio2" id="RegistrarCita_edificioNuevo" type="radio" name="Edificios" value="Torre de nueva hospitalización" />
                                         <span class="badge">Torre nueva de hospitalización</span>
-                                        <i class="fas fa-question-circle modalInfo" id="EdTorre"></i>
+                                        <a href="#" class="questionMark" data-tooltip-content="#tooltip_contentInfoTorreNueva"><i
+                                            class="fas fa-question-circle icono-infoTorre" style="font-size:17px" id="EdTorre"></i></a>
                                     </div>
+
+                                    <div class="tooltip_templates">
+                                            <span id="tooltip_contentInfoTorreAntigua">
+                                                <span>Recuerda:</span>
+                                                <ul>
+                                                    <li> <span class="badge badge-danger"><span class="ocultaBadge">CC</span></span>
+                                                        <span class="">Rojo: Formulario sin empezar.
+                                                        </span>
+                                                    </li>
+                                                    <li> <span class="badge badge-warning"><span class="ocultaBadge">CC</span></span>
+                                                        <span class="">Amarillo: Formulario empezado.
+                                                        </span>
+                                                    </li>
+                                                    <li> <span class="badge badge-info"><span class="ocultaBadge">CC</span></span>
+                                                        <span class="">Azul: Formulario completo hasta la penúltima página.
+                                                        </span>
+                                                    </li>
+                                                    <li> <span class="badge badge-success"><span class="ocultaBadge">CC</span></span>
+                                                        <span class="">Verde: Formulario completo.
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </span>
+                                            </span>
+        
+                                        </div>
+
+
+                                        <div class="tooltip_templates">
+                                                <span id="tooltip_contentInfoTorreNueva">
+                                                    <span>Recuerda:</span>
+                                                    <ul>
+                                                        <li> <span class="badge badge-danger"><span class="ocultaBadge">CC</span></span>
+                                                            <span class="">Rojo: Formulario sin empezar.
+                                                            </span>
+                                                        </li>
+                                                        <li> <span class="badge badge-warning"><span class="ocultaBadge">CC</span></span>
+                                                            <span class="">Amarillo: Formulario empezado.
+                                                            </span>
+                                                        </li>
+                                                        <li> <span class="badge badge-info"><span class="ocultaBadge">CC</span></span>
+                                                            <span class="">Azul: Formulario completo hasta la penúltima página.
+                                                            </span>
+                                                        </li>
+                                                        <li> <span class="badge badge-success"><span class="ocultaBadge">CC</span></span>
+                                                            <span class="">Verde: Formulario completo.
+                                                            </span>
+                                                        </li>
+                                                    </ul>
+                                                </span>
+                                                </span>
+            
+                                            </div>
+
+
+
                                 </div>
                                 <span class="text-danger mr-5" id="error-edificio">No has seleccionado un edificio.</span>
                             </div>  
-                        </div> -->
+                        </div> 
 
-                        <!-- <div class="row mb-3 justify-content-center">
-                            <div class="col-10 text-center">
-
-
-                                
-                                <div class="infoEdificios text-center row" id="feedbackEdAntiguo">
-                                    <div class="col-12">
-                                        <span class="badge badge-secondary mb-3 d-block" style="font-size:15px">Áreas:</span>
-
-                                        <textarea id="t1" readonly="true" style="width: 100%;" rows="6" style="display:none;">
-
-                                                        • Banco de sangre           • Genética
-                                                        • Radioterapia                  • Electrocardiograma
-                                                        • Psicología                       • Clínica del dolor
-                                                        • Cuidados Paliativos
-                                        </textarea>
-                                    </div>
-                                </div>
-
-                  
-                                <div class="infoEdificios text-center row" id="feedbackEdTorre">
-                                    <div class="col-12">
-                                        <span class="badge badge-info mb-2 d-block" style="font-size:15px">Planta baja:</span>
-
-                                        <textarea class="plantaBajaArea" style="width: 100%;" readonly="true" style="display:none;">
-
-                                                        • Rayos- X                                    • Mastografía
-                                                        • Ultrasonido                                • Tomografía
-                                                        • Resonancia Magnética             • PET-CT
-                                                        • MUGA                                        • Gammagrafía ósea
-                                                        • Atención inmediata
-                                                        </textarea>
-                                    </div>
-
-
-                                    <div class="col-12">
-                                        <span class="badge badge-warning mb-2 d-block" style="font-size:15px; color:#fff">1er
-                                            Piso:
-                                        </span>
-                                    </div>
-
-
-                                    <div class="col-12">
-                                        <textarea class="primerPisoArea" style="width: 100% !important;" readonly="true" style="display:none;">
-
-                                                        • Laboratorio                                • Farmacia</textarea>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <span class="badge badge-danger mb-2 d-block" style="font-size:15px">2do Piso:</span>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <textarea class="segundoPisoArea" style="width: 100%;" readonly="true" style="display:none;">
-
-
-                                                        • Clínica de Mama                       • Oncología médica
-                                                        • Unidad Funcional Mama          • Cirugía oncológica
-                                                        • Cirugía plástica                         •  Ecocardiograma
-                                                        • Trabajo Social                           •  Quimioterapia
-                                                        • Protocolos                                 •  Nutrición
-                                                        • Odontología                              •  M-8                   
-                                                        • Programa Mujer Jóven             •  Donaciones
-                                                        • Valoración cardiovascular
-                                                        • Colocación de catéteres</textarea>
-                                    </div>
-
-                                </div>
-
-                                
-                            </div>
-                        </div> -->
+                        
 
 
                         <!-- ***** Piso ***** -->
 
-                        <!-- <div class="row mb-3 justify-content-center btns-pisos" id="pisosDiv">
+                         <div class="row mb-3 justify-content-center btns-pisos" id="pisosDiv">
                             <div class="col-1" data-toggle="tooltip" data-placement="top" title="Seleccione el tipo de su cita"><i
                                     class="fas fa-question-circle modalInfo"></i></div>
                             <div class="col-2"> <span class="colorGlobal">Piso:</span></div>
@@ -439,7 +427,7 @@
                                 </div>
                                 <span class="text-danger mr-5" id="error-piso">No has seleccionado un piso.</span>
                             </div>
-                        </div> -->
+                        </div> 
 
                     </div>
                     <div class="modal-footer">
