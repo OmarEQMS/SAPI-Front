@@ -5,6 +5,11 @@
 /* ---------------------------------------------------
     GENERALES
 ----------------------------------------------------- */
+.select-Tratamiento , .fecha-Inicio-Tratamiento{
+
+    font-size:12.5px;
+}
+
 .swal-button--confirm {
     padding: 7px 19px;
     border-radius: 25px;
@@ -22,6 +27,11 @@
     font-size: 15px;
     text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
   }
+
+.button-clicked {
+    background: #1cbb44;
+    color: #fff;
+}
 
 .badge-danger{
     background: #FF53A9;

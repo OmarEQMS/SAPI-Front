@@ -12,8 +12,7 @@
     <link href="../lib/fontawesome/css/all.css" rel="stylesheet" />
     <link href='../lib/fullcalendar/fullcalendar.css' rel='stylesheet' />
     <link href="../lib/tooltipster/dist/css/tooltipster.bundle.min.css" rel="stylesheet" />
-    <link href="../lib/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-shadow.min.css" rel="stylesheet"
-    />
+    <link href="../lib/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-shadow.min.css" rel="stylesheet" />
     <link href="../lib/datatables/datatables.min.css" rel="stylesheet" type="text/css" />
     <script src="../lib/jquery/jquery-3.3.1.js" type="application/javascript"></script>
     <script src="../lib/jquery/jqueryPostGo.js" type="application/javascript"></script>
@@ -90,6 +89,9 @@
                         <i class="fas fa-home"></i>Mis Citas</a>
                 </li>
 
+                <!-- AQUÍ MODIFIQUÉ -->
+                <li><a href="./misTratamientos.html"><i class="fas fa-prescription-bottle-alt"></i>Mis Tratamientos</a></li>
+
                 <li>
                     <a href="#">
                         <i class="far fa-user"></i>Mi Cuenta</a>
@@ -161,7 +163,8 @@
                         <div class="form-group row justify-content-center">
                             <div class="col-12 text-center">
                                 <label for="file-input">
-                                    <img src="../img/user.png" class="edit-image" alt="Click aquí" title="Click aquí" width="200px" height="200px">
+                                    <img src="../img/user.png" class="edit-image" alt="Click aquí" title="Click aquí"
+                                        width="200px" height="200px">
                                 </label>
                                 <input type="file" class="editar-imagen" id="file-input" />
                             </div>
@@ -200,13 +203,16 @@
                         <div class="form-group row justify-content-center">
                             <div class="col-4">
                                 <label for="myEmail">Correo</label>
-                                <input type="email" class="form-control" id="myEmail" placeholder="Introduzca su correo" required />
-                                <span class="text-danger" id="error-correo">El formato no es correcto, introduce un mínimo de 2 y un máximo de 254 caracteres.</span>
+                                <input type="email" class="form-control" id="myEmail" placeholder="Introduzca su correo"
+                                    required />
+                                <span class="text-danger" id="error-correo">El formato no es correcto, introduce un
+                                    mínimo de 2 y un máximo de 254 caracteres.</span>
                             </div>
                             <div class="col-4">
                                 <label for="numExpediente">Número de Expediente</label>
                                 <input type="text" class="form-control" id="numExpediente" placeholder="Introduce numero de expediente" />
-                                <span class="text-danger" id="error-noExpediente">El formato no es correcto, deben ser 9 caracteres.</span>
+                                <span class="text-danger" id="error-noExpediente">El formato no es correcto, deben ser
+                                    9 caracteres.</span>
                             </div>
                         </div>
 
@@ -215,8 +221,9 @@
                             <div class="col-4">
                                 <label for="telephoneNum">Teléfono</label>
                                 <input type="text" class="form-control" id="telephoneNum" placeholder="Introduce teléfono"
-                                 required />
-                                 <span class="text-danger" id="error-tel">El formato no es correcto, deben ser 10 dígitos.</span>
+                                    required />
+                                <span class="text-danger" id="error-tel">El formato no es correcto, deben ser 10
+                                    dígitos.</span>
                             </div>
 
                             <div class="col-4">
@@ -248,8 +255,7 @@
                             </div>
                             <div class="col-4">
                                 <label for="myPRZ">PRZ</label>
-                                <input type="text" class="form-control" id="myPRZ" value="UA7AJA8" readonly
-                                />
+                                <input type="text" class="form-control" id="myPRZ" value="UA7AJA8" readonly />
                             </div>
                         </div>
 
@@ -260,15 +266,18 @@
                                 <label for="tratamiento">Tratamientos</label>
                             </div>
                             <div class="col-1">
-
+                                <button type="button" id="add-Tratamiento" class="btn btn-morado btn-block mb-3" style="border-radius: 20px;">
+                                    <i class="fas fa-plus"></i>
+                                </button>
                             </div>
 
                         </div>
 
                         <div id="tratamientos">
                             <div class="form-group row justify-content-center contenedor-tratamientos">
-                                <div class="col-7">
-                                    <select id="tratamiento" class="form-control">
+
+                                <div class="col-3">
+                                    <select id="tratamiento" class="form-control select-Tratamiento">
                                         <option disabled selected>Elegir Tratamiento</option>
                                         <option value="">Quimioterapia antes de la cirugía</option>
                                         <option value="">Quimioterapia después de la cirugía</option>
@@ -283,9 +292,28 @@
                                         <option value="">Ya terminé tratamiento</option>
                                     </select>
                                 </div>
+                                <!-- Fecha Inicio Tratamiento-->
+                                <div class="col-3">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">
+                                                <i class="fas fa-calendar-alt"></i>
+                                            </div>
+                                        </div>
+                                        <input placeholder="Inicio" class="selectStyle form-control textbox-n fecha-Inicio-Tratamiento" type="text"
+                                            onfocus="(this.type='date')" id="fechaInicioTratamiento">
+                                    </div>
+                                </div>
+
                                 <div class="col-1">
-                                    <button type="button" id="add-Tratamiento" class="btn btn-morado" style="border-radius: 25px;">
-                                        <i class="fas fa-plus"></i>
+                                    <button type="button" id="remove-Primer-Tratamiento"
+                                        class="btn btn-outline-danger btn-block remove-Primer-Tratamiento" style="border-radius: 20px;">
+                                        <i class="fas fa-times"></i></button>
+                                </div>
+                                <div class="col-1">
+                                    <button type="button" id="finished-Tratamiento" class="btn btn-outline-success btn-block button-Fin-Tratamiento"
+                                        style="border-radius: 20px;">
+                                        <i class="fas fa-check"></i>
                                     </button>
                                 </div>
                             </div>
@@ -304,8 +332,8 @@
                         <!-- 6 -->
                         <div class="form-group row justify-content-center mt-3">
                             <div class="col-4">
-                                <button type="button" class="btn btn-outline-info btn-block" id="btn-contraseña" style="border-radius:20px" data-toggle="modal"
-                                    data-target="#modalCambiarContraseña">
+                                <button type="button" class="btn btn-outline-info btn-block" id="btn-contraseña" style="border-radius:20px"
+                                    data-toggle="modal" data-target="#modalCambiarContraseña">
                                     <i class="fas fa-key mr-1"></i>
                                     Cambiar Contraseña</button>
                             </div>
@@ -319,7 +347,8 @@
 
                         <div class="form-group row justify-content-center mt-4">
                             <div class="col-4">
-                                <button type="button" class="btn btn-outline-danger btn-block" style="border-radius:20px" id="eliminarCuentaPaciente">
+                                <button type="button" class="btn btn-outline-danger btn-block" style="border-radius:20px"
+                                    id="eliminarCuentaPaciente">
                                     <i class="fas fa-trash-alt mr-1"></i>
                                     Eliminar Cuenta</button>
                             </div>
@@ -333,7 +362,8 @@
         </div>
 
         <!-- ********** MODAL EDITAR CONTRASEÑA **********-->
-        <div class="modal fade" id="modalCambiarContraseña" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="modalCambiarContraseña" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -351,7 +381,8 @@
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <span class="text-danger" id="error-contraseña">La contraseña debe tener al menos 1 número, 1 letra minúscula, 1 mayúscula y una extensión de 8 a 14 caracteres.</span>
+                                <span class="text-danger" id="error-contraseña">La contraseña debe tener al menos 1
+                                    número, 1 letra minúscula, 1 mayúscula y una extensión de 8 a 14 caracteres.</span>
                             </div>
                         </div>
                         <div class="form-row">
@@ -368,7 +399,8 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" style="border-radius: 20px" data-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn btn-primary" id="btn-updatePassword" style="border-radius: 20px">Cambiar contraseña</button>
+                        <button type="button" class="btn btn-primary" id="btn-updatePassword" style="border-radius: 20px">Cambiar
+                            contraseña</button>
                     </div>
                 </div>
             </div>

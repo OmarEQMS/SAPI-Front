@@ -1,4 +1,4 @@
-import {validation} from './validaciones.js';
+import { validation } from './validaciones.js';
 
 $(document).ready(function () {
 
@@ -22,6 +22,7 @@ $(document).ready(function () {
         theme: 'tooltipster-shadow',
         delay: '140'
     });
+
 
     //Reemplazar el nombre del archivo en el input
     $('.custom-file-input').on('change', function () {
@@ -91,14 +92,14 @@ $(document).ready(function () {
         delay: '140'
     });
 
-  
+
 
     //AGREGAR Y QUITAR TRATAMIENTOS
-    $('#add-Tratamiento').on('click', function(){
+    $('#add-Tratamiento').on('click', function () {
 
         var plantilla = `<div class="form-group row justify-content-center contenedor-tratamientos">
-        <div class="col-7">
-            <select id="tratamiento" class="form-control">
+        <div class="col-3">
+            <select id="tratamiento" class="form-control select-Tratamiento">
                 <option disabled selected>Elegir Tratamiento</option>
                 <option value="">Quimioterapia antes de la cirugía</option>
                 <option value="">Quimioterapia después de la cirugía</option>
@@ -113,9 +114,24 @@ $(document).ready(function () {
                 <option value="">Ya terminé tratamiento</option>
             </select>
         </div>
+        <div class="col-3">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">
+                                                <i class="fas fa-calendar-alt"></i>
+                                            </div>
+                                        </div>
+                                        <input placeholder="Inicio" class="selectStyle form-control textbox-n fecha-Inicio-Tratamiento" type="text"
+                                            onfocus="(this.type='date')" id="fechaInicioTratamiento">
+                                    </div>
+                                </div>
             <div class="col-1">
-                <button type="button" id="remove-Tratamiento" class="btn btn-outline-danger" style="border-radius: 25px;">
-                <i class="fas fa-times"></i>
+                <button type="button" id="remove-Tratamiento" class="btn btn-outline-danger btn-block" style="border-radius: 20px;">
+                <i class="fas fa-times"></i></button>
+            </div>
+            <div class="col-1">
+                <button type="button" id="finished-Tratamiento" class="btn btn-outline-success btn-block button-Fin-Tratamiento" style="border-radius: 20px;">
+                <i class="fas fa-check"></i></button>
             </div>
 
     </div>`;
@@ -124,62 +140,90 @@ $(document).ready(function () {
 
     });
 
-    $('body').on('click', '#remove-Tratamiento', function(){
+    $('body').on('click', '#remove-Tratamiento', function () {
 
         $(this).parent().parent().remove();
 
     });
 
+    //Deshabilitar tratamiento cuando ya se seleccionó uno
+    $('body').on('change', '.select-Tratamiento', function () {
+        
+        $(this).attr('disabled', true);
+
+    });
+
+    //Editar tratamiento
+    $('body').on('click', '.remove-Primer-Tratamiento', function () {
+        
+        $('.select-Tratamiento').attr('disabled', false);
+        $('.fecha-Inicio-Tratamiento').attr('disabled', false);
+
+    });
+
+    //Deshabilitar tratamiento cuando ya se seleccionó uno
+    $('body').on('focusout', '.fecha-Inicio-Tratamiento', function () {
+
+        $(this).attr('disabled', true);
+
+    });
+
+    //Cambiar color al botón de confirmación de tratamiento terminado
+    $('body').on('click', '.button-Fin-Tratamiento', function () {
+
+        $(this).addClass('button-clicked');
+
+    });
 
     //VALIDACIONES CUENTA
 
     //1.- Correo
-    $('#myEmail').on('change', function(){
-        if(validation.isValidEmail($('#myEmail'))){
+    $('#myEmail').on('change', function () {
+        if (validation.isValidEmail($('#myEmail'))) {
             $('#error-correo').hide();
-        }else{
+        } else {
             $('#error-correo').show();
         }
-    }); 
+    });
 
     //2.- No expediente
-    $('#numExpediente').on('change', function(){
-        if(validation.isValidNoExpediente($('#numExpediente'))){
+    $('#numExpediente').on('change', function () {
+        if (validation.isValidNoExpediente($('#numExpediente'))) {
             $('#error-noExpediente').hide();
-        }else{
+        } else {
             $('#error-noExpediente').show();
         }
-    }); 
+    });
 
     //3.- Telefono
-    $('#telephoneNum').on('change', function(){
-        if(validation.isValidPhoneNumber($('#telephoneNum'))){
+    $('#telephoneNum').on('change', function () {
+        if (validation.isValidPhoneNumber($('#telephoneNum'))) {
             $('#error-tel').hide();
-        }else{
+        } else {
             $('#error-tel').show();
         }
-    }); 
+    });
 
     //4.- Tipo Sangre
-    $('#tipo-sangre').on('change', function(){
-        if(validation.isValidBloodType($('#tipo-sangre'))){
+    $('#tipo-sangre').on('change', function () {
+        if (validation.isValidBloodType($('#tipo-sangre'))) {
             $('#error-tipoSangre').hide();
-        }else{
+        } else {
             $('#error-tipoSangre').show();
         }
     });
 
     //5.- Contraseña
-    $('#password').on('change', function(){
-        if(validation.isValidBloodType($('#password'))){
+    $('#password').on('change', function () {
+        if (validation.isValidBloodType($('#password'))) {
             $('#error-contraseña').hide();
-        }else{
+        } else {
             $('#error-contraseña').show();
         }
     });
 
     //Verificar que las contraseñas son iguales
-    $('#password-confirm').on('change', function(){
+    $('#password-confirm').on('change', function () {
 
         areEqualPasswords($('#password'), $('#password-confirm'));
 
@@ -209,33 +253,33 @@ $(document).ready(function () {
     //VALIDACIONES INDEX
 
     //1.- Fecha
-    $('#RegistrarCita_fecha').on('change', function(){
-        if(validation.isValidDate($('#RegistrarCita_fecha'))){
+    $('#RegistrarCita_fecha').on('change', function () {
+        if (validation.isValidDate($('#RegistrarCita_fecha'))) {
             $('#error-fecha').hide();
-        }else{
+        } else {
             $('#error-fecha').show();
         }
-    }); 
+    });
 
     //2.- Tipo cita
-    $('#RegistrarCita_tipo').on('change', function(){
-        if(validation.isValidSelect($('#RegistrarCita_tipo'))){
+    $('#RegistrarCita_tipo').on('change', function () {
+        if (validation.isValidSelect($('#RegistrarCita_tipo'))) {
             $('#error-tipoCita').hide();
-        }else{
+        } else {
             $('#error-tipoCita').show();
         }
     });
 
-     //3.- Médico
-     $('#RegistrarCita_medico').on('change', function(){
-        if(validation.isValidSelect($('#RegistrarCita_medico'))){
+    //3.- Médico
+    $('#RegistrarCita_medico').on('change', function () {
+        if (validation.isValidSelect($('#RegistrarCita_medico'))) {
             $('#error-medico').hide();
-        }else{
+        } else {
             $('#error-medico').show();
         }
     });
 
-     //4.- Edificio
+    //4.- Edificio
     //  $('#RegistrarCita_edificioAntiguo') || $('#RegistrarCita_edificioNuevo').on('change', function(){
     //     if(validation.isValidCheckbox($('#RegistrarCita_edificioAntiguo' || '#RegistrarCita_edificioNuevo'))){
     //         $('#error-edificio').hide();
@@ -253,6 +297,6 @@ $(document).ready(function () {
     //     }
     // });
 
-    
+
 
 });
