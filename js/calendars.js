@@ -22,12 +22,12 @@ $(document).ready(function () {
         },
         events: [
             {
-                title: 'Cita Radiologo',
-                start: '2018-09-23'
+                title: 'Cita Nutriologo',
+                start: '2018-11-23'
             },
             {
                 title: 'Cita Nutriologo',
-                start: '2018-08-30'
+                start: '2018-11-23'
             }
         ]
     });

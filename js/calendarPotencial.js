@@ -20,11 +20,11 @@ $('#calendarCitas').fullCalendar({
     events: [
         {
             title: 'Preconsulta',
-            start: '2018-09-30'
+            start: '2018-11-29'
         },
         {
             title: 'Navegación',
-            start: '2018-09-30'
+            start: '2018-11-30'
         }
     ]
 });
